@@ -10,32 +10,29 @@ jobs:
   build:
     runs-on: ubuntu-latest
     permissions:
-      contents: write # Important for pushing the file
+      contents: write
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4 # Updated to v4
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }} # Uses the built-in secret for permission
 
       - name: Set up Python
-        uses: actions/setup-python@v5 # Updated to v5
+        uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: |
-          pip install -r requirements.txt
+        run: pip install -r requirements.txt
 
       - name: Run Scraper
         run: python zg_event.py
 
-- name: Commit and Push Calendar
+      - name: Commit and Push
         run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
           git add zagreb_gigs.ics
-          # This checks if there are actually changes to save
-          if git diff --staged --quiet; then
-            echo "No changes to commit"
-          else
-            git commit -m "Automated Calendar Update"
-            git push origin main
-          fi
+          # This command commits only if there are changes, otherwise it just moves on
+          git diff-index --quiet HEAD || git commit -m "Update Calendar"
+          git push
