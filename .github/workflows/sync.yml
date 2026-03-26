@@ -27,11 +27,15 @@ jobs:
       - name: Run Scraper
         run: python zg_event.py
 
-      - name: Commit and Push Calendar
+- name: Commit and Push Calendar
         run: |
-          git config --global user.name "Zagreb-Bot"
-          git config --global user.email "bot@github.com"
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add zagreb_gigs.ics
-          # The '|| exit 0' ensures the script doesn't fail if there are no new concerts to add
-          git commit -m "Automated Calendar Update" || exit 0
-          git push
+          # This checks if there are actually changes to save
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Automated Calendar Update"
+            git push origin main
+          fi
