@@ -1,6 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 import json
 import csv
 from icalendar import Calendar, Event
@@ -36,9 +36,12 @@ for event_tag in soup.select("li.event-listings-element"):
         data = json.loads(json_script.string)
         event_data = data[0] if isinstance(data, list) else data
         
+        # Date Handling
         event_date_str = event_data.get('startDate')
-        event_date = datetime.fromisoformat(event_date_str).replace(tzinfo=timezone.utc)
-        if event_date < today: continue
+        # We parse the date and set a base time of 19:00 (7 PM) to avoid the "All-Day" color fill
+        base_date = datetime.fromisoformat(event_date_str).replace(hour=19, minute=0, second=0, tzinfo=timezone.utc)
+        
+        if base_date < today: continue
 
         venue = event_data.get('location', {}).get('name', 'Venue TBD')
         link = event_data.get('url', '')
@@ -54,10 +57,15 @@ for event_tag in soup.select("li.event-listings-element"):
             artist_name = event_data.get('name', '').split('@')[0].strip()
             artists_to_add = [artist_name]
 
-        for artist in artists_to_add:
+        # 2. Add each artist to CSV and Calendar
+        for index, artist in enumerate(artists_to_add):
+            # For festivals, we shift the time by 30 mins per artist so they don't overlap
+            start_time = base_date + timedelta(minutes=30 * index)
+            end_time = start_time + timedelta(hours=1)
+
             # Add to CSV list
             all_rows.append({
-                "date": event_date.strftime("%Y-%m-%d"),
+                "date": start_time.strftime("%Y-%m-%d"),
                 "artist": artist,
                 "venue": venue,
                 "type": e_type,
@@ -67,25 +75,30 @@ for event_tag in soup.select("li.event-listings-element"):
             # Add to ICS Calendar
             v_event = Event()
             v_event.add('summary', f"{artist} ({e_type})")
-            v_event.add('dtstart', event_date.date()) # All-day event
+            
+            # By providing a specific time (start/end), it becomes a "Timed Event" (unfilled box)
+            v_event.add('dtstart', start_time)
+            v_event.add('dtend', end_time)
+            
             v_event.add('location', f"{venue}, Zagreb")
             v_event.add('description', f"Tickets: {link}")
-            # Unique ID prevents duplicates in Google Calendar
-            v_event.add('uid', f"{event_date.strftime('%Y%m%d')}-{uuid.uuid5(uuid.NAMESPACE_DNS, artist+link)}")
+            
+            # Unique ID prevents duplicates
+            v_event.add('uid', f"{start_time.strftime('%Y%m%d%H%M')}-{uuid.uuid5(uuid.NAMESPACE_DNS, artist+link)}")
             cal.add_component(v_event)
 
     except Exception as e:
         print(f"Error: {e}")
         continue
 
-# 2. Save CSV
+# 3. Save CSV
 with open(CSV_FILE, "w", newline="", encoding="utf-8-sig") as file:
     writer = csv.DictWriter(file, fieldnames=["date", "artist", "venue", "type", "link"])
     writer.writeheader()
     writer.writerows(all_rows)
 
-# 3. Save ICS
+# 4. Save ICS
 with open(ICS_FILE, "wb") as f:
     f.write(cal.to_ical())
 
-print(f"Success! Saved {len(all_rows)} entries to {CSV_FILE} and {ICS_FILE}.")
+print(f"Success! Saved {len(all_rows)} entries. They will now appear as timed invitations.")
