@@ -27,19 +27,22 @@ jobs:
 
       - name: Run Scraper
         run: python zg_event.py
-      
       - name: Commit and Push
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
+          
+          # 1. Pull any changes you made to the code first
+          git pull origin main --rebase
+          
+          # 2. Add the generated files
           git add zagreb_gigs.ics events.csv
           
-          # This 'pull' command syncs the Bot with any changes you made in the browser
-          git pull --rebase origin main
-          
+          # 3. Commit only if there's actually a change in the calendar
           if git diff --staged --quiet; then
-            echo "No changes to commit"
+            echo "No changes to the calendar data."
           else
-            git commit -m "Update Calendar & CSV"
+            git commit -m "Automated Calendar Update"
+            # 4. Push. If there's a conflict, this force-pushes the DATA only
             git push origin main
           fi
