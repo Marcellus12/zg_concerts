@@ -27,10 +27,19 @@ jobs:
 
       - name: Run Scraper
         run: python zg_event.py
-
+      
       - name: Commit and Push
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add zagreb_gigs.ics events.csv
-          git diff-index --quiet HEAD || (git commit -m "Update Calendar & CSV" && git push)
+          
+          # This 'pull' command syncs the Bot with any changes you made in the browser
+          git pull --rebase origin main
+          
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Update Calendar & CSV"
+            git push origin main
+          fi
