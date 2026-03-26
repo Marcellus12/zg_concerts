@@ -37,7 +37,7 @@ jobs:
           git fetch origin main
           git reset --mixed origin/main
           
-          git add zagreb_gigs.ics events.csv
+          git add zagreb_gigs.ics events.csv last_updated.js
           
           if git diff --staged --quiet; then
             echo "No changes to the calendar data."
