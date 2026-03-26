@@ -130,3 +130,7 @@ with open(ICS_FILE, "wb") as f:
 
 print(f"Successfully generated {len(all_rows)} events.")
 print(f"Calendar saved as {ICS_FILE} with 'invitation' style formatting.")
+
+now_str = datetime.now().strftime("%d.%m.%Y %H:%M")
+with open("last_updated.js", "w") as f:
+    f.write(f"document.getElementById('update-time').innerHTML = '{now_str}';")
