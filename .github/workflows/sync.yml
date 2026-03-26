@@ -1,0 +1,39 @@
+name: Zagreb Music Sync
+
+on:
+  schedule:
+    # GitHub uses UTC time. 
+    # 11:34 UTC is 12:34 Zagreb (Standard Time)
+    - cron: '34 11 * * *'
+    # 22:45 UTC is 23:45 Zagreb (Standard Time)
+    - cron: '45 22 * * *'
+  workflow_dispatch: # This adds a "Run now" button for testing
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # This allows the bot to save the .ics file back to your repo
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Run Scraper
+        run: python zg_event.py
+
+      - name: Commit and Push Calendar
+        run: |
+          git config --global user.name "Zagreb-Bot"
+          git config --global user.email "bot@github.com"
+          git add zagreb_gigs.ics
+          git commit -m "Automated Calendar Update" || exit 0
+          git push
