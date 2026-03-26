@@ -1,535 +1,355 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//Zagreb Music Events//EN
+PRODID:-//Zagreb Gig Calendar//EN
 X-WR-CALNAME:Zagreb Gigs
 BEGIN:VEVENT
-SUMMARY:Richie Hawtin (Concert)
+SUMMARY:Richie Hawtin
 DTSTART:20260327T200000Z
-DTEND:20260327T210000Z
-UID:9799d977-114e-5b3b-94bc-63bc585380dd
-DESCRIPTION:Tickets & Info: https://www.songkick.com/concerts/42990894-ric
- hie-hawtin-at-unknown-venue?utm_medium=organic&utm_source=microformat
+DTEND:20260327T230000Z
+UID:71b69d84-dacf-5659-848c-2b286936d26b
 LOCATION:Zagreb\, Zagreb
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Silicone Soul (Concert)
+SUMMARY:Silicone Soul
 DTSTART:20260327T190000Z
-DTEND:20260327T200000Z
-UID:aab3d8d5-0fa0-53fe-b9aa-8a7ea5e2969c
-DESCRIPTION:Tickets & Info: https://www.songkick.com/concerts/43018929-sil
- icone-soul-at-boogaloo?utm_medium=organic&utm_source=microformat
+DTEND:20260327T220000Z
+UID:daf2b6f4-34e1-5920-b174-8c1ba6c769b1
 LOCATION:Boogaloo\, Zagreb
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Mary Ocher (Concert)
+SUMMARY:Mary Ocher
 DTSTART:20260401T200000Z
-DTEND:20260401T210000Z
-UID:7081a5ee-78c1-584f-82a0-1c3c99b85ea6
-DESCRIPTION:Tickets & Info: https://www.songkick.com/concerts/42977496-mar
- y-ocher-at-klub-mocvara?utm_medium=organic&utm_source=microformat
+DTEND:20260401T230000Z
+UID:1348ded5-9240-585d-aded-64a389e06cce
 LOCATION:Klub Močvara\, Zagreb
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Nhau (Concert)
-DTSTART:20260407T190000Z
-DTEND:20260407T200000Z
-UID:458ca749-ef0b-5199-8e6b-90397f0a5019
-DESCRIPTION:Tickets & Info: https://www.songkick.com/concerts/43045512-nha
- u-at-kuc-travno?utm_medium=organic&utm_source=microformat
+SUMMARY:Nhau
+DTSTART:20260407T200000Z
+DTEND:20260407T230000Z
+UID:e7c66706-6e56-5b3d-9808-c707d3654e8c
 LOCATION:Kuc Travno\, Zagreb
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Zvjezdan Ružić (Concert)
+SUMMARY:Zvjezdan Ružić
 DTSTART:20260410T200000Z
-DTEND:20260410T210000Z
-UID:e875f8f8-8c11-5673-bf59-738e61db0a1e
-DESCRIPTION:Tickets & Info: https://www.songkick.com/concerts/43059058-zvj
- ezdan-ruzic-at-tvornica-kulture?utm_medium=organic&utm_source=microformat
+DTEND:20260410T230000Z
+UID:5e0f07fa-ad1c-5732-a41f-4ebc74fddbaf
 LOCATION:Tvornica kulture\, Zagreb
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Geoff Tate's Operation Mindcrime (Concert)
-DTSTART:20260412T190000Z
-DTEND:20260412T200000Z
-UID:4b40e9a3-31f9-5d04-8a28-132ddae0b27e
-DESCRIPTION:Tickets & Info: https://www.songkick.com/concerts/42986845-geo
- ff-tates-operation-mindcrime-at-boogaloo-club?utm_medium=organic&utm_sourc
- e=microformat
+SUMMARY:Geoff Tate's Operation Mindcrime
+DTSTART:20260412T200000Z
+DTEND:20260412T230000Z
+UID:59bb3ba6-382f-51f7-8543-401ccdde9ae4
 LOCATION:Boogaloo Club\, Zagreb
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:The Boojums (CA) (Concert)
-DTSTART:20260413T190000Z
-DTEND:20260413T200000Z
-UID:21f3da2a-258a-54f2-be06-5f63e22a3a40
-DESCRIPTION:Tickets & Info: https://www.songkick.com/concerts/43107659-boo
- jums-ca-at-club-mochvara?utm_medium=organic&utm_source=microformat
+SUMMARY:The Boojums (CA)
+DTSTART:20260413T200000Z
+DTEND:20260413T230000Z
+UID:0282b203-3fa1-55ef-a196-e4f6aa3f6a97
 LOCATION:Club Mochvara\, Zagreb
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Paul van Dyk (Concert)
+SUMMARY:Paul van Dyk
 DTSTART:20260417T190000Z
-DTEND:20260417T200000Z
-UID:2c67a783-36fe-5fca-9cd9-cb3d8b108e87
-DESCRIPTION:Tickets & Info: https://www.songkick.com/concerts/42963283-pau
- l-van-dyk-at-boogaloo?utm_medium=organic&utm_source=microformat
+DTEND:20260417T220000Z
+UID:80427371-8bd8-55c9-9976-56fcf4ea568e
 LOCATION:Boogaloo\, Zagreb
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Blair Coron (Concert)
+SUMMARY:Blair Coron
 DTSTART:20260417T200000Z
-DTEND:20260417T210000Z
-UID:6ecdc606-f515-5576-a90b-310595acf32e
-DESCRIPTION:Tickets & Info: https://www.songkick.com/concerts/43113257-bla
- ir-coron-at-unknown-venue?utm_medium=organic&utm_source=microformat
+DTEND:20260417T230000Z
+UID:68bfd051-8ae3-5342-baac-91569740aa7b
 LOCATION:Zagreb\, Zagreb
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:The Sonic Dawn (Concert)
+SUMMARY:The Sonic Dawn
 DTSTART:20260418T200000Z
-DTEND:20260418T210000Z
-UID:940b1ec0-e629-5f2a-9454-61c22f6b9251
-DESCRIPTION:Tickets & Info: https://www.songkick.com/concerts/43076667-son
- ic-dawn-at-hard-place?utm_medium=organic&utm_source=microformat
+DTEND:20260418T230000Z
+UID:e04bd606-9458-5c37-9d72-c1d40c4d37a3
 LOCATION:Hard Place\, Zagreb
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Khirki (Concert)
+SUMMARY:Khirki
 DTSTART:20260418T200000Z
-DTEND:20260418T210000Z
-UID:45017761-37c8-5765-b4be-3ccdb3f4b853
-DESCRIPTION:Tickets & Info: https://www.songkick.com/concerts/43067926-khi
- rki-at-primarius?utm_medium=organic&utm_source=microformat
+DTEND:20260418T230000Z
+UID:2a567c74-3357-5033-878a-455e9a70409a
 LOCATION:Primarius\, Zagreb
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Myrath (Concert)
+SUMMARY:Myrath
 DTSTART:20260419T200000Z
-DTEND:20260419T210000Z
-UID:0dcc93ce-85f3-5ec3-bbba-5a73d15e4db9
-DESCRIPTION:Tickets & Info: https://www.songkick.com/concerts/42849977-myr
- ath-at-klub-mocvara?utm_medium=organic&utm_source=microformat
+DTEND:20260419T230000Z
+UID:b662a357-1a42-5dad-94aa-c9ad007cadf6
 LOCATION:Klub Močvara\, Zagreb
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Leap (Concert)
+SUMMARY:Leap
 DTSTART:20260423T200000Z
-DTEND:20260423T210000Z
-UID:2dc9e183-a71f-54f1-b7e9-a9a7f07b7a71
-DESCRIPTION:Tickets & Info: https://www.songkick.com/concerts/42953356-lea
- p-at-boogaloo-club?utm_medium=organic&utm_source=microformat
+DTEND:20260423T230000Z
+UID:62b704ad-aca5-55a1-9921-8f56cfe9d8bb
 LOCATION:Boogaloo Club\, Zagreb
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Valentino Vivace (Concert)
-DTSTART:20260425T210000Z
-DTEND:20260425T220000Z
-UID:72530c36-a1ad-5ab6-8e02-380cac6fc2b9
-DESCRIPTION:Tickets & Info: https://www.songkick.com/concerts/42995403-val
- entino-vivace-at-peti-kupe?utm_medium=organic&utm_source=microformat
+SUMMARY:Valentino Vivace
+DTSTART:20260425T200000Z
+DTEND:20260425T230000Z
+UID:e08a3f52-42a4-5b64-9613-aea046512b8d
 LOCATION:Peti Kupe\, Zagreb
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Andrea Ljekaj (Concert)
-DTSTART:20260425T210000Z
-DTEND:20260425T220000Z
-UID:c035210d-b430-5ab8-91bf-91acde06fbc4
-DESCRIPTION:Tickets & Info: https://www.songkick.com/concerts/43111099-and
- rea-ljekaj-at-attack-akc-medika?utm_medium=organic&utm_source=microformat
+SUMMARY:Andrea Ljekaj
+DTSTART:20260425T200000Z
+DTEND:20260425T230000Z
+UID:0054b80c-2410-5654-966b-aff77f7a20e5
 LOCATION:Attack! AKC Medika\, Zagreb
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Eros Ramazzotti (Concert)
+SUMMARY:Eros Ramazzotti
 DTSTART:20260428T200000Z
-DTEND:20260428T210000Z
-UID:c553777f-40d2-558a-8b8b-595ebcf14885
-DESCRIPTION:Tickets & Info: https://www.songkick.com/concerts/42551959-ero
- s-ramazzotti-at-arena-zagreb?utm_medium=organic&utm_source=microformat
+DTEND:20260428T230000Z
+UID:c4b885bd-53c3-5541-81a6-9ebfb46ee5f1
 LOCATION:Arena Zagreb\, Zagreb
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:She Past Away (Concert)
+SUMMARY:She Past Away
 DTSTART:20260501T200000Z
-DTEND:20260501T210000Z
-UID:87a2b5e1-51da-5dd0-9ef6-635a831cf404
-DESCRIPTION:Tickets & Info: https://www.songkick.com/concerts/43092606-she
- -past-away-at-tvornica-kulture?utm_medium=organic&utm_source=microformat
+DTEND:20260501T230000Z
+UID:7d7ac6b2-7e31-557e-83b7-0559127a90d1
 LOCATION:Tvornica kulture\, Zagreb
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Nedim Jahic (Concert)
+SUMMARY:Nedim Jahic
 DTSTART:20260502T200000Z
-DTEND:20260502T210000Z
-UID:38a8c69c-049f-56e8-a61b-7f098b9439ad
-DESCRIPTION:Tickets & Info: https://www.songkick.com/concerts/43076117-ned
- im-jahic-at-skolsko-sportska-dvorana-josip-samarzija-bepo?utm_medium=organ
- ic&utm_source=microformat
+DTEND:20260502T230000Z
+UID:9da2c06f-259a-52d1-a8fb-d01b57387c70
 LOCATION:Školsko Sportska Dvorana ''Josip Samaržija - Bepo''\, Zagreb
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:The Music of Hans Zimmer (Concert)
+SUMMARY:The Music of Hans Zimmer
 DTSTART:20260503T200000Z
-DTEND:20260503T210000Z
-UID:40a93bed-13e8-51d0-99c6-8e26421b9c82
-DESCRIPTION:Tickets & Info: https://www.songkick.com/concerts/42791914-mus
- ic-of-hans-zimmer-at-mozaik-event-centar?utm_medium=organic&utm_source=mic
- roformat
+DTEND:20260503T230000Z
+UID:e8ef2ed0-056f-51e7-b99b-7d118a3563d4
 LOCATION:Mozaik Event Centar\, Zagreb
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:MDC (Concert)
+SUMMARY:MDC
 DTSTART:20260507T200000Z
-DTEND:20260507T210000Z
-UID:d01753ba-cbb2-5ca0-ba3f-75a63b154831
-DESCRIPTION:Tickets & Info: https://www.songkick.com/concerts/43106564-mdc
- -at-klub-mocvara?utm_medium=organic&utm_source=microformat
+DTEND:20260507T230000Z
+UID:ddbb3eeb-8bbc-586a-a419-7df9dfe47f73
 LOCATION:Klub Močvara\, Zagreb
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Kim Wilde (Concert)
+SUMMARY:Kim Wilde
 DTSTART:20260508T200000Z
-DTEND:20260508T210000Z
-UID:b41235ea-8284-5a4a-bc45-3cf81817eeeb
-DESCRIPTION:Tickets & Info: https://www.songkick.com/concerts/43105916-kim
- -wilde-at-tvornica-kulture?utm_medium=organic&utm_source=microformat
+DTEND:20260508T230000Z
+UID:3d00bf61-d8d7-5b0f-96bf-ec7987ae8612
 LOCATION:Tvornica kulture\, Zagreb
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:PAYMON (Concert)
-DTSTART:20260508T220000Z
+SUMMARY:PAYMON
+DTSTART:20260508T200000Z
 DTEND:20260508T230000Z
-UID:fcd45197-0de5-5182-82eb-55e0b177f02c
-DESCRIPTION:Tickets & Info: https://www.songkick.com/concerts/42991344-pay
- mon-at-autonomni-kulturni-centar-attack?utm_medium=organic&utm_source=micr
- oformat
+UID:8a4df9e9-c035-5594-930f-c3d5585bf8ae
 LOCATION:Autonomni Kulturni Centar - Attack\, Zagreb
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:caroline (Concert)
+SUMMARY:caroline
 DTSTART:20260509T200000Z
-DTEND:20260509T210000Z
-UID:9b300545-56ab-5cc1-b162-cb892ee5ebd4
-DESCRIPTION:Tickets & Info: https://www.songkick.com/concerts/42825406-car
- oline-at-primarius?utm_medium=organic&utm_source=microformat
+DTEND:20260509T230000Z
+UID:b0ef62f9-f580-516f-9b3d-5e825905e6fe
 LOCATION:Primarius\, Zagreb
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Atmosphere (Concert)
-DTSTART:20260511T190000Z
-DTEND:20260511T200000Z
-UID:e4e157e7-cbd8-56a0-8682-0200d639583d
-DESCRIPTION:Tickets & Info: https://www.songkick.com/concerts/42995778-atm
- osphere-at-vintage-industrial-bar?utm_medium=organic&utm_source=microforma
- t
+SUMMARY:Atmosphere
+DTSTART:20260511T200000Z
+DTEND:20260511T230000Z
+UID:17e3a779-8d95-5829-a9b9-320fa10b8aea
 LOCATION:Vintage Industrial Bar\, Zagreb
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Strange Majik (Concert)
+SUMMARY:Strange Majik
 DTSTART:20260516T200000Z
-DTEND:20260516T210000Z
-UID:9acabe27-b0d2-5c72-9146-99051d72f192
-DESCRIPTION:Tickets & Info: https://www.songkick.com/concerts/43111803-str
- ange-majik-at-zcuk-regenerator?utm_medium=organic&utm_source=microformat
+DTEND:20260516T230000Z
+UID:72c4a0e7-18cc-55f3-b838-8a4447a92025
 LOCATION:ZCUK Regenerator\, Zagreb
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Oddisee (Concert)
+SUMMARY:Oddisee
 DTSTART:20260517T200000Z
-DTEND:20260517T210000Z
-UID:0bceafcd-c239-5f5f-a213-0920096d2d58
-DESCRIPTION:Tickets & Info: https://www.songkick.com/concerts/43018401-odd
- isee-at-garden-brewery?utm_medium=organic&utm_source=microformat
+DTEND:20260517T230000Z
+UID:6a2a24db-f19f-5504-9a0b-08941cee3988
 LOCATION:Garden Brewery\, Zagreb
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:kids from the sky (Concert)
+SUMMARY:kids from the sky
 DTSTART:20260523T190000Z
-DTEND:20260523T200000Z
-UID:fdecc5fe-0055-5a6f-ac85-bac840b91f43
-DESCRIPTION:Tickets & Info: https://www.songkick.com/concerts/43076473-kid
- s-from-the-sky-at-boogaloo?utm_medium=organic&utm_source=microformat
+DTEND:20260523T220000Z
+UID:d159be48-12d1-587c-85a1-4f7b2694e8c9
 LOCATION:Boogaloo\, Zagreb
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Steven Brown (Concert)
+SUMMARY:Steven Brown
 DTSTART:20260527T200000Z
-DTEND:20260527T210000Z
-UID:c81a642d-873d-508c-a947-368fca235e67
-DESCRIPTION:Tickets & Info: https://www.songkick.com/concerts/43113315-ste
- ven-brown-at-croatia?utm_medium=organic&utm_source=microformat
+DTEND:20260527T230000Z
+UID:2edce19c-cdb3-524f-96bd-e711ed5f6402
 LOCATION:Croatia\, Zagreb
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Seine <3 (Concert)
+SUMMARY:Seine <3
 DTSTART:20260530T200000Z
-DTEND:20260530T210000Z
-UID:775e79db-2b15-585f-97f4-f0f9dc0618c9
-DESCRIPTION:Tickets & Info: https://www.songkick.com/concerts/42917371-sei
- ne-3-at-unknown-venue?utm_medium=organic&utm_source=microformat
+DTEND:20260530T230000Z
+UID:628d39b5-3846-582f-8888-a4d6c23ad201
 LOCATION:Zagreb\, Zagreb
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Yngwie Malmsteen (Concert)
+SUMMARY:Yngwie Malmsteen
 DTSTART:20260604T200000Z
-DTEND:20260604T210000Z
-UID:c6cd6345-7e06-5554-a10c-6f9e0c1f566f
-DESCRIPTION:Tickets & Info: https://www.songkick.com/concerts/43052553-yng
- wie-malmsteen-at-boogaloo-club?utm_medium=organic&utm_source=microformat
+DTEND:20260604T230000Z
+UID:2af27c3f-5efa-5353-8f57-4a43cba7aa86
 LOCATION:Boogaloo Club\, Zagreb
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Empire of the Sun (Concert)
+SUMMARY:Empire of the Sun
 DTSTART:20260610T200000Z
-DTEND:20260610T210000Z
-UID:afcf9590-be48-5c99-b292-682afbc1ff8a
-DESCRIPTION:Tickets & Info: https://www.songkick.com/concerts/43008762-emp
- ire-of-the-sun-at-src-salata?utm_medium=organic&utm_source=microformat
+DTEND:20260610T230000Z
+UID:8a7a4ca9-25e3-5393-8b92-805fef139112
 LOCATION:SRC Šalata\, Zagreb
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Sabaton (Concert)
-DTSTART:20260615T190000Z
-DTEND:20260615T200000Z
-UID:10b238ec-b249-5d51-8d36-9d2716c5098c
-DESCRIPTION:Tickets & Info: https://www.songkick.com/concerts/42954543-sab
- aton-at-zagrebacki-velesajam?utm_medium=organic&utm_source=microformat
+SUMMARY:Sabaton
+DTSTART:20260615T200000Z
+DTEND:20260615T230000Z
+UID:7bab6fdc-8723-531c-af40-6fc1cab5d395
 LOCATION:Zagrebački Velesajam\, Zagreb
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Sting (Concert)
+SUMMARY:Sting
 DTSTART:20260617T200000Z
-DTEND:20260617T210000Z
-UID:728880e6-34b8-5d66-b3f1-8b33b289704f
-DESCRIPTION:Tickets & Info: https://www.songkick.com/concerts/42821973-sti
- ng-at-arena-zagreb?utm_medium=organic&utm_source=microformat
+DTEND:20260617T230000Z
+UID:f260cb86-89d4-51cc-97be-309326c06368
 LOCATION:Arena Zagreb\, Zagreb
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Gorillaz (Festival)
-DTSTART:20260622T170000Z
-DTEND:20260622T180000Z
-UID:6ed48116-ac47-59a8-85a3-c057314ff1bf
-DESCRIPTION:Tickets & Info: https://www.songkick.com/festivals/430223-inmu
- sic/id/42858958-inmusic-festival-2026?utm_medium=organic&utm_source=microf
- ormat
-LOCATION:Lake Jarun\, Zagreb
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Kings of Leon (Festival)
-DTSTART:20260622T173000Z
-DTEND:20260622T183000Z
-UID:1e864514-3fb8-5887-a22a-c00379615310
-DESCRIPTION:Tickets & Info: https://www.songkick.com/festivals/430223-inmu
- sic/id/42858958-inmusic-festival-2026?utm_medium=organic&utm_source=microf
- ormat
-LOCATION:Lake Jarun\, Zagreb
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:The Flaming Lips (Festival)
-DTSTART:20260622T180000Z
-DTEND:20260622T190000Z
-UID:54d367e1-2d90-5759-8d51-826dc467282c
-DESCRIPTION:Tickets & Info: https://www.songkick.com/festivals/430223-inmu
- sic/id/42858958-inmusic-festival-2026?utm_medium=organic&utm_source=microf
- ormat
-LOCATION:Lake Jarun\, Zagreb
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Jack White (Festival)
-DTSTART:20260622T183000Z
-DTEND:20260622T193000Z
-UID:8202c6d9-f775-50a7-a06b-14fc981d0cb2
-DESCRIPTION:Tickets & Info: https://www.songkick.com/festivals/430223-inmu
- sic/id/42858958-inmusic-festival-2026?utm_medium=organic&utm_source=microf
- ormat
-LOCATION:Lake Jarun\, Zagreb
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:IDLES (Festival)
-DTSTART:20260622T190000Z
-DTEND:20260622T200000Z
-UID:30e55706-f9fc-5bad-91da-b62901ebb7cf
-DESCRIPTION:Tickets & Info: https://www.songkick.com/festivals/430223-inmu
- sic/id/42858958-inmusic-festival-2026?utm_medium=organic&utm_source=microf
- ormat
-LOCATION:Lake Jarun\, Zagreb
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Dry Cleaning (Festival)
-DTSTART:20260622T193000Z
-DTEND:20260622T203000Z
-UID:8fe83475-35db-52c7-a3d2-075cf39f92f7
-DESCRIPTION:Tickets & Info: https://www.songkick.com/festivals/430223-inmu
- sic/id/42858958-inmusic-festival-2026?utm_medium=organic&utm_source=microf
- ormat
-LOCATION:Lake Jarun\, Zagreb
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Jehnny Beth (Festival)
+SUMMARY:INmusic Festival 2026
 DTSTART:20260622T200000Z
-DTEND:20260622T210000Z
-UID:4764fdb7-ed8d-5b8f-bf7b-2b3241a5f743
-DESCRIPTION:Tickets & Info: https://www.songkick.com/festivals/430223-inmu
- sic/id/42858958-inmusic-festival-2026?utm_medium=organic&utm_source=microf
- ormat
+DTEND:20260622T230000Z
+UID:7319ff83-0fa0-5264-8ab1-a85898e2ee21
 LOCATION:Lake Jarun\, Zagreb
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Fat Dog (Festival)
-DTSTART:20260622T203000Z
-DTEND:20260622T213000Z
-UID:11c47af1-1233-5731-9cfd-a4dd98bec951
-DESCRIPTION:Tickets & Info: https://www.songkick.com/festivals/430223-inmu
- sic/id/42858958-inmusic-festival-2026?utm_medium=organic&utm_source=microf
- ormat
-LOCATION:Lake Jarun\, Zagreb
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Cabaret Voltaire (Concert)
+SUMMARY:Cabaret Voltaire
 DTSTART:20260626T200000Z
-DTEND:20260626T210000Z
-UID:076266ad-aabe-55f9-9a22-7ff35a406197
-DESCRIPTION:Tickets & Info: https://www.songkick.com/concerts/43000163-cab
- aret-voltaire-at-tvornica-kulture?utm_medium=organic&utm_source=microforma
- t
+DTEND:20260626T230000Z
+UID:734f6e06-3bbe-57d9-ae43-218fcdaa714b
 LOCATION:Tvornica kulture\, Zagreb
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Rio Tashan (Festival)
+SUMMARY:Hideout Festival 2026
 DTSTART:20260630T200000Z
-DTEND:20260630T210000Z
-UID:c83a61d4-7f2f-5775-8145-59138d1bdc21
-DESCRIPTION:Tickets & Info: https://www.songkick.com/festivals/180461-hide
- out/id/43067942-hideout-festival-2026?utm_medium=organic&utm_source=microf
- ormat
+DTEND:20260630T230000Z
+UID:1004f52d-4751-59d7-844f-11d8c8cad60a
 LOCATION:Croatia\, Zagreb
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:The Kilimanjaro Darkjazz Ensemble (Concert)
+SUMMARY:The Kilimanjaro Darkjazz Ensemble
 DTSTART:20260702T200000Z
-DTEND:20260702T210000Z
-UID:dbdf9f29-ecb2-558f-a3e9-26fd8f4d2a1e
-DESCRIPTION:Tickets & Info: https://www.songkick.com/concerts/43038918-kil
- imanjaro-darkjazz-ensemble-at-club-mochvara?utm_medium=organic&utm_source=
- microformat
+DTEND:20260702T230000Z
+UID:d2467c46-3156-5de3-9cf9-ce87b8b5d935
 LOCATION:Club Mochvara\, Zagreb
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:BEAT (Concert)
+SUMMARY:BEAT
 DTSTART:20260707T200000Z
-DTEND:20260707T210000Z
-UID:b6645035-52bc-52be-b913-059ba7202fba
-DESCRIPTION:Tickets & Info: https://www.songkick.com/concerts/42973950-bea
- t-at-src-salata?utm_medium=organic&utm_source=microformat
+DTEND:20260707T230000Z
+UID:e80933ab-b1d0-5e18-b662-ac3f7b5f9710
 LOCATION:SRC Šalata\, Zagreb
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Voivod (Concert)
-DTSTART:20260713T190000Z
-DTEND:20260713T200000Z
-UID:ab75d055-8085-591f-aa84-2dc7e9aabc85
-DESCRIPTION:Tickets & Info: https://www.songkick.com/concerts/43030784-voi
- vod-at-vintage-industrial-bar?utm_medium=organic&utm_source=microformat
+SUMMARY:Voivod
+DTSTART:20260713T200000Z
+DTEND:20260713T230000Z
+UID:4ecfb9eb-3a1d-5d3d-8620-5575d2558c3e
 LOCATION:Vintage Industrial Bar\, Zagreb
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Marilyn Manson (Concert)
+SUMMARY:Marilyn Manson
 DTSTART:20260716T200000Z
-DTEND:20260716T210000Z
-UID:0a88c70f-12f2-5903-9753-8b3b24b48fc9
-DESCRIPTION:Tickets & Info: https://www.songkick.com/concerts/42919521-mar
- ilyn-manson-at-arena-zagreb?utm_medium=organic&utm_source=microformat
+DTEND:20260716T230000Z
+UID:8fa9c89c-3093-5ac4-95e3-ce3da7395e28
 LOCATION:Arena Zagreb\, Zagreb
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Amyl and The Sniffers (Concert)
+SUMMARY:Amyl and The Sniffers
 DTSTART:20260808T200000Z
-DTEND:20260808T210000Z
-UID:a0504658-21bb-5cd2-8c30-8b818a61f48a
-DESCRIPTION:Tickets & Info: https://www.songkick.com/concerts/42905298-amy
- l-and-the-sniffers-at-src-salata?utm_medium=organic&utm_source=microformat
+DTEND:20260808T230000Z
+UID:64927eef-b869-5944-ae50-619980578b11
 LOCATION:SRC Šalata\, Zagreb
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:The Nocturnal Affair (Concert)
+SUMMARY:The Nocturnal Affair
 DTSTART:20260924T190000Z
-DTEND:20260924T200000Z
-UID:e7f27005-48b1-5cba-a286-b5814af0ef9b
-DESCRIPTION:Tickets & Info: https://www.songkick.com/concerts/43119457-noc
- turnal-affair-at-boogaloo?utm_medium=organic&utm_source=microformat
+DTEND:20260924T220000Z
+UID:63c8942e-d4f9-5fa1-8ce7-6b1da2be0d9a
 LOCATION:Boogaloo\, Zagreb
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Autechre (Concert)
+SUMMARY:Autechre
 DTSTART:20260930T200000Z
-DTEND:20260930T210000Z
-UID:dd9ad135-4b02-5558-aa45-cb6fb5031686
-DESCRIPTION:Tickets & Info: https://www.songkick.com/concerts/42917393-aut
- echre-at-tvornica-kulture?utm_medium=organic&utm_source=microformat
+DTEND:20260930T230000Z
+UID:28d7e493-b22e-51b1-9d20-ec57fcb9ad44
 LOCATION:Tvornica kulture\, Zagreb
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Kosheen (Concert)
+SUMMARY:Kosheen
 DTSTART:20261008T200000Z
-DTEND:20261008T210000Z
-UID:6065529a-d9cf-5dfd-9841-c95e9f691cf7
-DESCRIPTION:Tickets & Info: https://www.songkick.com/concerts/43105891-kos
- heen-at-tvornica-kulture?utm_medium=organic&utm_source=microformat
+DTEND:20261008T230000Z
+UID:381fab30-b549-5284-a494-d4015cbb90db
 LOCATION:Tvornica kulture\, Zagreb
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:GZUZ (Concert)
+SUMMARY:GZUZ
 DTSTART:20261020T200000Z
-DTEND:20261020T210000Z
-UID:8a237e81-203d-5243-a90f-19ce34aa8d25
-DESCRIPTION:Tickets & Info: https://www.songkick.com/concerts/43102192-gzu
- z-at-tvornica-kulture?utm_medium=organic&utm_source=microformat
+DTEND:20261020T230000Z
+UID:1aa6e476-2408-51df-92b7-8cc27522c42a
 LOCATION:Tvornica kulture\, Zagreb
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Danko Jones (Concert)
-DTSTART:20261021T190000Z
-DTEND:20261021T200000Z
-UID:78df8ce2-8f47-510a-b5a8-bee3be1c3fae
-DESCRIPTION:Tickets & Info: https://www.songkick.com/concerts/43075926-dan
- ko-jones-at-vintage-industrial-bar?utm_medium=organic&utm_source=microform
- at
+SUMMARY:Danko Jones
+DTSTART:20261021T200000Z
+DTEND:20261021T230000Z
+UID:724edd3b-a890-50f0-9454-c8fcc1db477c
 LOCATION:Vintage Industrial Bar\, Zagreb
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Fink (Concert)
+SUMMARY:Fink
 DTSTART:20261024T200000Z
-DTEND:20261024T210000Z
-UID:ce218f70-dce6-5a0f-aee5-b9ee4075ea67
-DESCRIPTION:Tickets & Info: https://www.songkick.com/concerts/43099913-fin
- k-at-klub-mocvara?utm_medium=organic&utm_source=microformat
+DTEND:20261024T230000Z
+UID:a84117f8-e230-524f-a06d-5a3b072a5708
 LOCATION:Klub Močvara\, Zagreb
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Ki Klop (Concert)
+SUMMARY:Ki Klop
 DTSTART:20261030T200000Z
-DTEND:20261030T210000Z
-UID:ad35fa4d-f96f-589e-9684-bac980536804
-DESCRIPTION:Tickets & Info: https://www.songkick.com/concerts/43076538-ki-
- klop-at-tvornica-kulture?utm_medium=organic&utm_source=microformat
+DTEND:20261030T230000Z
+UID:2a6d9f12-04fa-53ff-a85a-80549a8330cb
 LOCATION:Tvornica kulture\, Zagreb
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Tommy Emmanuel (Concert)
+SUMMARY:Tommy Emmanuel
 DTSTART:20261105T200000Z
-DTEND:20261105T210000Z
-UID:554ecc88-13cb-5a28-8ea6-a2b7d767c22a
-DESCRIPTION:Tickets & Info: https://www.songkick.com/concerts/43084350-tom
- my-emmanuel-at-kino-sc?utm_medium=organic&utm_source=microformat
+DTEND:20261105T230000Z
+UID:c2b95d31-c883-56bf-beb0-e1ba671b2dcf
 LOCATION:Kino SC\, Zagreb
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Kamelot (Concert)
+SUMMARY:Kamelot
 DTSTART:20261113T200000Z
-DTEND:20261113T210000Z
-UID:cdc965a3-15b3-51f3-9ff3-dc45d2b53d12
-DESCRIPTION:Tickets & Info: https://www.songkick.com/concerts/43102952-kam
- elot-at-boogaloo-club?utm_medium=organic&utm_source=microformat
+DTEND:20261113T230000Z
+UID:a8ff2998-64ad-50ec-8f80-8c13959c6df6
 LOCATION:Boogaloo Club\, Zagreb
 END:VEVENT
 END:VCALENDAR
