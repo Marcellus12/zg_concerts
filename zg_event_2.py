@@ -117,5 +117,13 @@ with open("test_events.csv", "w", newline="", encoding="utf-8-sig") as f:
     writer.writeheader()
     writer.writerows(all_rows)
 
+# ... (rest of your script above)
+
 # Create a TEST timestamp
-now_str = datetime.now().strftime("%d.%m.%Y %H:%M
+now_str = datetime.now().strftime("%d.%m.%Y %H:%M")
+with open("test_last_updated.js", "w") as f:
+    f.write(f"console.log('Test Scraper last run: {now_str}');")
+
+print(f"\n--- Phase 3: Saving Test Results ---")
+print(f"Done! Found {new_found_count} shows on Tvornica that were NOT on Songkick.")
+print(f"Files created: test_zagreb_gigs.ics, test_events.csv")
