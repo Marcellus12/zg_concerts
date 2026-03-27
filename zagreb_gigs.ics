@@ -3,22 +3,13 @@ VERSION:2.0
 PRODID:-//Zagreb Music Events//EN
 X-WR-CALNAME:Zagreb Gigs
 BEGIN:VEVENT
-SUMMARY:Richie Hawtin (Concert)
-DTSTART:20260327T200000Z
-DTEND:20260327T210000Z
-UID:9799d977-114e-5b3b-94bc-63bc585380dd
-DESCRIPTION:Tickets & Info: https://www.songkick.com/concerts/42990894-ric
- hie-hawtin-at-unknown-venue?utm_medium=organic&utm_source=microformat
-LOCATION:Zagreb\, Zagreb
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Silicone Soul (Concert)
-DTSTART:20260327T190000Z
-DTEND:20260327T200000Z
-UID:aab3d8d5-0fa0-53fe-b9aa-8a7ea5e2969c
-DESCRIPTION:Tickets & Info: https://www.songkick.com/concerts/43018929-sil
- icone-soul-at-boogaloo?utm_medium=organic&utm_source=microformat
-LOCATION:Boogaloo\, Zagreb
+SUMMARY:Sigmatron (Concert)
+DTSTART:20260328T230000Z
+DTEND:20260329T000000Z
+UID:07fc563c-2c17-5e10-ae47-203042cad196
+DESCRIPTION:Tickets & Info: https://www.songkick.com/concerts/43126824-sig
+ matron-at-moca?utm_medium=organic&utm_source=microformat
+LOCATION:MoCA\, Zagreb
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Mary Ocher (Concert)
@@ -137,6 +128,16 @@ UID:c035210d-b430-5ab8-91bf-91acde06fbc4
 DESCRIPTION:Tickets & Info: https://www.songkick.com/concerts/43111099-and
  rea-ljekaj-at-attack-akc-medika?utm_medium=organic&utm_source=microformat
 LOCATION:Attack! AKC Medika\, Zagreb
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Sing The Story 2026 (Concert)
+DTSTART:20260425T100000Z
+DTEND:20260425T110000Z
+UID:b56ecd77-e623-59ef-ae8d-82f4074ac2aa
+DESCRIPTION:Tickets & Info: https://www.songkick.com/festivals/3777690-sin
+ g-the-story/id/43126092-sing-the-story-2026?utm_medium=organic&utm_source=
+ microformat
+LOCATION:Čeśki Narodni Dom\, Zagreb
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Eros Ramazzotti (Concert)
@@ -513,23 +514,5 @@ UID:ad35fa4d-f96f-589e-9684-bac980536804
 DESCRIPTION:Tickets & Info: https://www.songkick.com/concerts/43076538-ki-
  klop-at-tvornica-kulture?utm_medium=organic&utm_source=microformat
 LOCATION:Tvornica kulture\, Zagreb
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Tommy Emmanuel (Concert)
-DTSTART:20261105T200000Z
-DTEND:20261105T210000Z
-UID:554ecc88-13cb-5a28-8ea6-a2b7d767c22a
-DESCRIPTION:Tickets & Info: https://www.songkick.com/concerts/43084350-tom
- my-emmanuel-at-kino-sc?utm_medium=organic&utm_source=microformat
-LOCATION:Kino SC\, Zagreb
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Kamelot (Concert)
-DTSTART:20261113T200000Z
-DTEND:20261113T210000Z
-UID:cdc965a3-15b3-51f3-9ff3-dc45d2b53d12
-DESCRIPTION:Tickets & Info: https://www.songkick.com/concerts/43102952-kam
- elot-at-boogaloo-club?utm_medium=organic&utm_source=microformat
-LOCATION:Boogaloo Club\, Zagreb
 END:VEVENT
 END:VCALENDAR
