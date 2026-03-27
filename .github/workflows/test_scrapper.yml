@@ -21,11 +21,16 @@ jobs:
       - name: Run New Scraper
         run: python zg_event_2.py
 
-      - name: Commit and Push Test Files
+- name: Commit and Push changes
         run: |
           git config --global user.name "GitHub Action Bot"
           git config --global user.email "actions@github.com"
-          # We only add the test files here to avoid touching the main ones
-          git add test_zagreb_gigs.ics test_events.csv test_last_updated.js
-          git commit -m "Test Run: Generated separate test files" || echo "No changes to commit"
-          git push
+          
+          # Pull latest changes to avoid the [rejected] error
+          [cite_start]git pull --rebase origin main [cite: 10]
+          
+          # Add ONLY the test files so we don't interfere with the main ones
+          [cite_start]git add test_zagreb_gigs.ics test_events.csv test_last_updated.js [cite: 10]
+          
+          git commit -m "Test Run: Updated Zagreb events via direct scraper" || echo "No changes to commit"
+          [cite_start]git push origin main [cite: 10]
