@@ -1,6 +1,6 @@
 name: Test New Scraper
 on: 
-  workflow_dispatch: # This is the "Manual Run" button
+  workflow_dispatch: 
 
 jobs:
   test_run:
@@ -21,10 +21,11 @@ jobs:
       - name: Run New Scraper
         run: python zg_event_2.py
 
-      - name: Commit and Push changes
+      - name: Commit and Push Test Files
         run: |
           git config --global user.name "GitHub Action Bot"
           git config --global user.email "actions@github.com"
-          git add zagreb_gigs.ics events.csv last_updated.js
-          git commit -m "Test Run: Updated Zagreb events via direct scraper" || echo "No changes to commit"
+          # We only add the test files here to avoid touching the main ones
+          git add test_zagreb_gigs.ics test_events.csv test_last_updated.js
+          git commit -m "Test Run: Generated separate test files" || echo "No changes to commit"
           git push
