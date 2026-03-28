@@ -515,4 +515,22 @@ DESCRIPTION:Tickets & Info: https://www.songkick.com/concerts/43076538-ki-
  klop-at-tvornica-kulture?utm_medium=organic&utm_source=microformat
 LOCATION:Tvornica kulture\, Zagreb
 END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Tommy Emmanuel (Concert)
+DTSTART:20261105T200000Z
+DTEND:20261105T210000Z
+UID:554ecc88-13cb-5a28-8ea6-a2b7d767c22a
+DESCRIPTION:Tickets & Info: https://www.songkick.com/concerts/43084350-tom
+ my-emmanuel-at-kino-sc?utm_medium=organic&utm_source=microformat
+LOCATION:Kino SC\, Zagreb
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Kamelot (Concert)
+DTSTART:20261113T200000Z
+DTEND:20261113T210000Z
+UID:cdc965a3-15b3-51f3-9ff3-dc45d2b53d12
+DESCRIPTION:Tickets & Info: https://www.songkick.com/concerts/43102952-kam
+ elot-at-boogaloo-club?utm_medium=organic&utm_source=microformat
+LOCATION:Boogaloo Club\, Zagreb
+END:VEVENT
 END:VCALENDAR
