@@ -3,15 +3,6 @@ VERSION:2.0
 PRODID:-//Zagreb Music Events//EN
 X-WR-CALNAME:Zagreb Gigs
 BEGIN:VEVENT
-SUMMARY:Sigmatron (Concert)
-DTSTART:20260328T230000Z
-DTEND:20260329T000000Z
-UID:07fc563c-2c17-5e10-ae47-203042cad196
-DESCRIPTION:Tickets & Info: https://www.songkick.com/concerts/43126824-sig
- matron-at-moca?utm_medium=organic&utm_source=microformat
-LOCATION:MoCA\, Zagreb
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Mary Ocher (Concert)
 DTSTART:20260401T200000Z
 DTEND:20260401T210000Z
@@ -306,6 +297,15 @@ DESCRIPTION:Tickets & Info: https://www.songkick.com/concerts/42821973-sti
 LOCATION:Arena Zagreb\, Zagreb
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:High Vis (Concert)
+DTSTART:20260618T200000Z
+DTEND:20260618T210000Z
+UID:b7899556-5dd1-5622-9f72-62041450de5a
+DESCRIPTION:Tickets & Info: https://www.songkick.com/concerts/43128199-hig
+ h-vis-at-vintage-industrial-bar?utm_medium=organic&utm_source=microformat
+LOCATION:Vintage Industrial Bar\, Zagreb
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Gorillaz (Festival)
 DTSTART:20260622T170000Z
 DTEND:20260622T180000Z
@@ -523,14 +523,5 @@ UID:554ecc88-13cb-5a28-8ea6-a2b7d767c22a
 DESCRIPTION:Tickets & Info: https://www.songkick.com/concerts/43084350-tom
  my-emmanuel-at-kino-sc?utm_medium=organic&utm_source=microformat
 LOCATION:Kino SC\, Zagreb
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:Kamelot (Concert)
-DTSTART:20261113T200000Z
-DTEND:20261113T210000Z
-UID:cdc965a3-15b3-51f3-9ff3-dc45d2b53d12
-DESCRIPTION:Tickets & Info: https://www.songkick.com/concerts/43102952-kam
- elot-at-boogaloo-club?utm_medium=organic&utm_source=microformat
-LOCATION:Boogaloo Club\, Zagreb
 END:VEVENT
 END:VCALENDAR
