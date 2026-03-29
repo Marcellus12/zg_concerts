@@ -524,4 +524,13 @@ DESCRIPTION:Tickets & Info: https://www.songkick.com/concerts/43084350-tom
  my-emmanuel-at-kino-sc?utm_medium=organic&utm_source=microformat
 LOCATION:Kino SC\, Zagreb
 END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Kamelot (Concert)
+DTSTART:20261113T200000Z
+DTEND:20261113T210000Z
+UID:cdc965a3-15b3-51f3-9ff3-dc45d2b53d12
+DESCRIPTION:Tickets & Info: https://www.songkick.com/concerts/43102952-kam
+ elot-at-boogaloo-club?utm_medium=organic&utm_source=microformat
+LOCATION:Boogaloo Club\, Zagreb
+END:VEVENT
 END:VCALENDAR
