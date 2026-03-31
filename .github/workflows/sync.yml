@@ -23,7 +23,8 @@ jobs:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: pip install -r requirements.txt
+        run: |
+          pip install requests beautifulsoup4 icalendar dateparser
 
       - name: Run Scraper
         run: python zg_event.py
@@ -33,16 +34,17 @@ jobs:
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           
-          # Force sync with the remote so we have the latest index.html etc.
+          # Force sync with the remote
           git fetch origin main
           git reset --mixed origin/main
           
+          # Add the production files
           git add zagreb_gigs.ics events.csv last_updated.js
           
           if git diff --staged --quiet; then
             echo "No changes to the calendar data."
           else
             git commit -m "Automated Calendar Update"
-            # The '--force' here is the magic key to stop the 'rejected' error
+            # The '--force' ensures the live site updates even if the index changed
             git push origin main --force
           fi
