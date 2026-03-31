@@ -20,12 +20,15 @@ jobs:
 
       - name: Run New Scraper
         run: python zg_event_2.py
+
       - name: Commit and Push changes
         run: |
           git config --global user.name "GitHub Action Bot"
           git config --global user.email "actions@github.com"
           git pull origin main --rebase
-          # Add the new specific check file
-          git add test_events.csv tvornica_check.csv test_last_updated.js || echo "Some files missing"
-          git commit -m "Updated Tvornica check file" || echo "No changes"
+          
+          # The '|| true' at the end prevents the 128 error if a file is missing
+          git add test_events.csv tvornica_check.csv test_zagreb_gigs.ics test_last_updated.js || true
+          
+          git commit -m "Test Run: Updated experimental data" || echo "No changes to commit"
           git push origin main
