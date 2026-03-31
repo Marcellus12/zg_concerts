@@ -155,12 +155,12 @@ except Exception as e:
 
 # --- PHASE 3: SAVE ---
 fieldnames = ["date", "artist", "venue", "type", "link", "source"]
-with open("test_events.csv", "w", newline="", encoding="utf-8-sig") as f:
+with open("test/test_events.csv", "w", newline="", encoding="utf-8-sig") as f:
     writer = csv.DictWriter(f, fieldnames=fieldnames)
     writer.writeheader()
     writer.writerows(all_rows)
 
-with open("test_zagreb_gigs.ics", "wb") as f:
+with open("test/test_zagreb_gigs.ics", "wb") as f:
     f.write(cal.to_ical())
 
 print(f"\nFinished! CSV saved with {len(all_rows)} rows.")
