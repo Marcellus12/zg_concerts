@@ -23,7 +23,7 @@ jobs:
           pip install requests beautifulsoup4 icalendar dateparser
 
       - name: Run New Scraper
-        run: python zg_event_2.py
+        run: python test/zg_event_2.py
 
       - name: Commit and Push changes
         run: |
@@ -31,7 +31,7 @@ jobs:
           git config --global user.email "actions@github.com"
           
           # Stage the files created by the script
-          git add test_events.csv test_zagreb_gigs.ics || true
+          git add test/test_events.csv test_zagreb_gigs.ics || true
           
           # Check if there are changes, commit if yes, skip if no
           if [ -n "$(git status --porcelain)" ]; then
