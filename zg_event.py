@@ -162,5 +162,9 @@ with open("events.csv", "w", newline="", encoding="utf-8-sig") as f:
 
 with open("zagreb_gigs.ics", "wb") as f:
     f.write(cal.to_ical())
-
+# --- Save to last_updated.js ---
+with open("last_updated.js", "w") as f:
+    now_str = datetime.now().strftime("%d.%m.%Y %H:%M")
+    # This updated version actually finds the HTML element and fills it
+    f.write(f"document.getElementById('update-time').textContent = '{now_str}';")
 print(f"\nFinished! CSV saved with {len(all_rows)} rows.")
