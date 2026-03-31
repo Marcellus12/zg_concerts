@@ -109,8 +109,10 @@ try:
 except Exception as e:
     print(f"Tvornica Scraper Error: {e}")
 
-# --- PHASE 3: SAVE ALL FILES ---
-# 1. Merged CSV
+# --- FINAL STEP: GENERATE ALL FILES ---
+# This ensures Git finds them in the next step of the workflow
+
+# 1. Merged Test CSV
 with open("test_events.csv", "w", newline="", encoding="utf-8-sig") as f:
     writer = csv.DictWriter(f, fieldnames=["date", "artist", "venue", "source"])
     writer.writeheader()
@@ -122,13 +124,14 @@ with open("tvornica_check.csv", "w", newline="", encoding="utf-8-sig") as f:
     writer.writeheader()
     writer.writerows(tvornica_only_rows)
 
-# 3. Test iCal file
+# 3. Test Calendar
 with open("test_zagreb_gigs.ics", "wb") as f:
     f.write(cal.to_ical())
 
-# 4. Test Last Updated JS
+# 4. THE MISSING FILE: Test Timestamp
 now_str = datetime.now().strftime("%d.%m.%Y %H:%M")
 with open("test_last_updated.js", "w") as f:
     f.write(f"console.log('Test Scraper last run: {now_str}');")
 
+print("Finished generating all 4 test files.")
 print(f"\nDone! Files updated: test_events.csv, tvornica_check.csv, test_zagreb_gigs.ics, test_last_updated.js")
