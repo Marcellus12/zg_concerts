@@ -168,3 +168,12 @@ with open("last_updated.js", "w") as f:
     # This updated version actually finds the HTML element and fills it
     f.write(f"document.getElementById('update-time').textContent = '{now_str}';")
 print(f"\nFinished! CSV saved with {len(all_rows)} rows.")
+
+with open("last_updated.js", "w") as f:
+    # Get the current time in Croatian/European format
+    now_str = datetime.now().strftime("%d.%m.%Y %H:%M")
+    
+    # This writes the exact line of JavaScript your HTML is looking for
+    f.write(f"document.getElementById('update-time').textContent = '{now_str}';")
+
+print(f"Update time stamped: {now_str}")
