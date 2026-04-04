@@ -34,21 +34,23 @@
     </main>
 
     <script>
-        // Replace this URL with your actual RAW GitHub CSV link
-        const CSV_URL = 'https://raw.https://github.com/Marcellus12/zg_concerts/events.csv';
+// This works perfectly when both files are in the same GitHub folder
+const CSV_URL = 'events.csv'; 
 
-        async function loadEvents() {
-            Papa.parse(CSV_URL, {
-                download: true,
-                header: true,
-                complete: function(results) {
-                    displayEvents(results.data);
-                },
-                error: function(err) {
-                    document.getElementById('event-grid').innerHTML = `<p class="text-red-500">Error loading data. Check CSV URL.</p>`;
-                }
-            });
+async function loadEvents() {
+    Papa.parse(CSV_URL, {
+        download: true,
+        header: true,
+        skipEmptyLines: true,
+        complete: function(results) {
+            displayEvents(results.data);
+        },
+        error: function(err) {
+            console.error("Fetch error:", err);
+            document.getElementById('event-grid').innerHTML = `<p class="text-red-500">Could not load Zagreb events. Please check the CSV file.</p>`;
         }
+    });
+}
 
         function displayEvents(events) {
             const container = document.getElementById('event-grid');
