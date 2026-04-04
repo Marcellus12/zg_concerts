@@ -19,10 +19,6 @@
             transform: translateY(-4px);
             background: rgba(30, 30, 35, 0.8);
         }
-        .accent-pill {
-            background: linear-gradient(135deg, rgba(99, 102, 241, 0.2) 0%, rgba(168, 85, 247, 0.2) 100%);
-            border: 1px solid rgba(168, 85, 247, 0.3);
-        }
     </style>
 </head>
 <body class="min-h-screen antialiased">
@@ -39,7 +35,35 @@
 
     <header class="max-w-6xl mx-auto px-6 pt-16 pb-8">
         <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-4">Upcoming <span class="text-indigo-500">Events</span></h1>
-        <p class="text-zinc-400 max-w-xl">A curated list of what's happening next in Zagreb. Data synced directly from our open-source repository.</p>
+        
+        <div class="space-y-6 mt-8">
+            <div class="relative max-w-md">
+                <span class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                    <svg class="h-5 w-5 text-zinc-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                </span>
+                <input 
+                    type="text" 
+                    onkeyup="handleSearch(this.value)"
+                    placeholder="Search artist or venue..." 
+                    class="block w-full pl-10 pr-3 py-3 bg-white/5 border border-white/10 rounded-2xl text-zinc-200 placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all"
+                >
+            </div>
+
+            <div class="flex flex-wrap items-center justify-between gap-4">
+                <div class="flex flex-wrap gap-2">
+                    <button onclick="filterByType('all')" class="px-4 py-2 rounded-full bg-indigo-500 text-white text-xs font-bold hover:bg-indigo-400 transition-all">All</button>
+                    <button onclick="filterByType('Concert')" class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-zinc-400 text-xs font-bold hover:bg-white/10 transition-all">Concerts</button>
+                    <button onclick="filterByType('Festival')" class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-zinc-400 text-xs font-bold hover:bg-white/10 transition-all">Festivals</button>
+                    <button onclick="filterByType('Theater')" class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-zinc-400 text-xs font-bold hover:bg-white/10 transition-all">Theater</button>
+                    <button onclick="filterByType('DJ')" class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-zinc-400 text-xs font-bold hover:bg-white/10 transition-all">DJ Sets</button>
+                </div>
+                
+                <button onclick="reverseSort()" class="flex items-center gap-2 text-sm text-zinc-500 hover:text-white transition-colors">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4"></path></svg>
+                    Toggle Order
+                </button>
+            </div>
+        </div>
     </header>
 
     <main class="max-w-6xl mx-auto px-6 py-8">
@@ -52,6 +76,15 @@
 
     <script>
         const CSV_URL = 'events.csv'; 
+        let allEvents = []; 
+
+        const TYPE_COLORS = {
+            'concert': 'text-indigo-300 bg-indigo-500/20 border-indigo-500/30',
+            'festival': 'text-emerald-300 bg-emerald-500/20 border-emerald-500/30',
+            'theater': 'text-amber-300 bg-amber-500/20 border-amber-500/30',
+            'dj': 'text-sky-300 bg-sky-500/20 border-sky-500/30',
+            'other': 'text-zinc-300 bg-zinc-500/20 border-zinc-500/30'
+        };
 
         async function loadEvents() {
             Papa.parse(CSV_URL, {
@@ -59,101 +92,86 @@
                 header: true,
                 skipEmptyLines: true,
                 complete: function(results) {
-                    // Slight delay to appreciate the smooth transition
-                    setTimeout(() => displayEvents(results.data), 300);
+                    allEvents = results.data;
+                    displayEvents(allEvents);
                 },
                 error: function() {
                     document.getElementById('event-grid').innerHTML = `
                         <div class="col-span-full text-center py-20 bg-red-500/10 rounded-3xl border border-red-500/20">
                             <p class="text-red-400 font-semibold">Failed to fetch events.csv</p>
-                            <p class="text-sm text-zinc-500">Ensure the file is in the root directory.</p>
                         </div>`;
                 }
             });
         }
-// 1. Updated Color Palette
-const TYPE_COLORS = {
-    'concert': 'text-indigo-300 bg-indigo-500/20 border-indigo-500/30',
-    'festival': 'text-emerald-300 bg-emerald-500/20 border-emerald-500/30',
-    'theater': 'text-amber-300 bg-amber-500/20 border-amber-500/30',
-    'dj': 'text-sky-300 bg-sky-500/20 border-sky-500/30', // Azure look
-    'other': 'text-zinc-300 bg-zinc-500/20 border-zinc-500/30'
-};
 
-let allEvents = []; 
+        function handleSearch(query) {
+            const q = query.toLowerCase();
+            const filtered = allEvents.filter(event => 
+                (event.artist || "").toLowerCase().includes(q) || 
+                (event.venue || "").toLowerCase().includes(q)
+            );
+            displayEvents(filtered);
+        }
 
-async function loadEvents() {
-    Papa.parse(CSV_URL, {
-        download: true,
-        header: true,
-        skipEmptyLines: true,
-        complete: function(results) {
-            allEvents = results.data;
+        function filterByType(type) {
+            const buttons = document.querySelectorAll('button[onclick^="filterByType"]');
+            buttons.forEach(btn => {
+                btn.classList.replace('bg-indigo-500', 'bg-white/5');
+                btn.classList.replace('text-white', 'text-zinc-400');
+            });
+            event.currentTarget.classList.add('bg-indigo-500', 'text-white');
+
+            if (type === 'all') {
+                displayEvents(allEvents);
+            } else {
+                const filtered = allEvents.filter(e => (e.type || "").toLowerCase() === type.toLowerCase());
+                displayEvents(filtered);
+            }
+        }
+
+        function reverseSort() {
+            allEvents.reverse();
             displayEvents(allEvents);
         }
-    });
-}
 
-// 2. Search & Filter Logic
-function handleSearch(query) {
-    const q = query.toLowerCase();
-    const filtered = allEvents.filter(event => 
-        (event.artist || "").toLowerCase().includes(q) || 
-        (event.venue || "").toLowerCase().includes(q)
-    );
-    displayEvents(filtered);
-}
+        function displayEvents(events) {
+            const container = document.getElementById('event-grid');
+            if (events.length === 0) {
+                container.innerHTML = `<p class="col-span-full text-center py-20 text-zinc-500 font-medium">No matching events found.</p>`;
+                return;
+            }
 
-function filterByType(type) {
-    if (type === 'all') {
-        displayEvents(allEvents);
-    } else {
-        const filtered = allEvents.filter(e => (e.type || "").toLowerCase() === type.toLowerCase());
-        displayEvents(filtered);
-    }
-}
+            container.innerHTML = events.map(event => {
+                const typeKey = (event.type || 'other').toLowerCase();
+                const badgeClass = TYPE_COLORS[typeKey] || TYPE_COLORS['other'];
+                const mapUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(event.venue + ' Zagreb')}`;
 
-function displayEvents(events) {
-    const container = document.getElementById('event-grid');
-    
-    container.innerHTML = events.map(event => {
-        const typeKey = (event.type || 'other').toLowerCase();
-        const badgeClass = TYPE_COLORS[typeKey] || TYPE_COLORS['other'];
-        
-        // Fixed Google Maps URL
-        const mapUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(event.venue + ' Zagreb')}`;
-
-        return `
-            <div class="glass-card rounded-3xl p-6 flex flex-col justify-between">
-                <div>
-                    <div class="flex justify-between items-start mb-4">
-                        <span class="px-3 py-1 rounded-full text-[10px] uppercase tracking-widest font-bold border ${badgeClass}">
-                            ${event.type || 'Event'}
-                        </span>
-                        <span class="text-zinc-500 text-xs font-medium">${event.date}</span>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-2 leading-tight">${event.artist}</h3>
-                    <p class="text-zinc-400 text-sm line-clamp-2 mb-6 italic">Source: ${event.source}</p>
-                </div>
-                
-                <div class="flex items-center justify-between mt-4 pt-4 border-t border-white/5">
-                    <a href="${mapUrl}" target="_blank" class="flex items-center text-zinc-300 text-sm hover:text-indigo-400 transition-colors group">
-                        <svg class="w-4 h-4 mr-2 text-indigo-500 group-hover:scale-125 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                            <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                        </svg>
-                        <span class="border-b border-transparent group-hover:border-indigo-500">${event.venue}</span>
-                    </a>
-                    
-                    <a href="${event.link}" target="_blank" class="text-white hover:bg-indigo-500/20 p-2 rounded-full transition-all">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-                        </svg>
-                    </a>
-                </div>
-            </div>`;
-    }).join('');
-}
+                return `
+                    <div class="glass-card rounded-3xl p-6 flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-4">
+                                <span class="px-3 py-1 rounded-full text-[10px] uppercase tracking-widest font-bold border ${badgeClass}">
+                                    ${event.type || 'Event'}
+                                </span>
+                                <span class="text-zinc-500 text-xs font-medium">${event.date}</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2 leading-tight">${event.artist}</h3>
+                            <p class="text-zinc-500 text-xs italic">via ${event.source}</p>
+                        </div>
+                        
+                        <div class="flex items-center justify-between mt-6 pt-4 border-t border-white/5">
+                            <a href="${mapUrl}" target="_blank" class="flex items-center text-zinc-300 text-sm hover:text-indigo-400 transition-colors group">
+                                <svg class="w-4 h-4 mr-2 text-indigo-500 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                                <span class="truncate max-w-[150px] border-b border-transparent group-hover:border-indigo-500">${event.venue}</span>
+                            </a>
+                            
+                            <a href="${event.link}" target="_blank" class="bg-indigo-500/10 hover:bg-indigo-500 text-indigo-400 hover:text-white p-2 rounded-xl transition-all">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                            </a>
+                        </div>
+                    </div>`;
+            }).join('');
+        }
         
         window.onload = loadEvents;
     </script>
