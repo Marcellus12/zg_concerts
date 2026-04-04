@@ -75,41 +75,52 @@
         function displayEvents(events) {
     const container = document.getElementById('event-grid');
     
+    // Check if data exists
+    if (!events || events.length === 0) {
+        container.innerHTML = `<p class="text-zinc-500 col-span-full text-center py-20">No upcoming events found in the CSV.</p>`;
+        return;
+    }
+
     container.innerHTML = events.map(event => {
-        // This ensures the code finds your data even if the CSV headers 
-        // are lowercase, uppercase, or have spaces.
-        const title = event.Title || event.title || event.Name || 'Upcoming Show';
-        const date = event.Date || event.date || event.time || 'TBA';
-        const desc = event.Description || event.description || 'No description provided.';
-        const loc = event.Location || event.location || 'Zagreb';
-        const link = event.Link || event.link || event.URL || '#';
-        const cat = event.Category || event.category || 'Concert';
+        // MAPPING TO YOUR EXACT CSV HEADERS
+        const title = event.artist || "Unknown Artist";
+        const date = event.date || "TBA";
+        const venue = event.venue || "Zagreb";
+        const type = event.type || "Concert";
+        const link = event.link || "#";
+        const source = event.source || "Web";
 
         return `
             <div class="glass-card rounded-3xl p-6 flex flex-col justify-between">
                 <div>
                     <div class="flex justify-between items-start mb-4">
                         <span class="accent-pill text-[10px] uppercase tracking-widest px-3 py-1 rounded-full text-indigo-300 font-bold">
-                            ${cat}
+                            ${type}
                         </span>
                         <span class="text-zinc-500 text-xs font-medium">${date}</span>
                     </div>
                     <h3 class="text-xl font-bold text-white mb-2 leading-tight">${title}</h3>
-                    <p class="text-zinc-400 text-sm line-clamp-3 mb-6">${desc}</p>
+                    <p class="text-zinc-400 text-sm line-clamp-2 mb-6">Live at ${venue}. Source: ${source}</p>
                 </div>
+                
                 <div class="flex items-center justify-between mt-4 pt-4 border-t border-white/5">
                     <div class="flex items-center text-zinc-300 text-sm">
-                        <svg class="w-4 h-4 mr-2 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                        ${loc}
+                        <svg class="w-4 h-4 mr-2 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                            <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                        ${venue}
                     </div>
-                    <a href="${link}" target="_blank" class="text-white hover:text-indigo-400 transition-colors">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                    <a href="${link}" target="_blank" class="text-white hover:text-indigo-400 transition-colors p-2 bg-white/5 rounded-full">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                        </svg>
                     </a>
                 </div>
             </div>`;
     }).join('');
 }
-
+        
         window.onload = loadEvents;
     </script>
 </body>
