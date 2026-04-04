@@ -3,21 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Explore Events | Zagreb Live</title>
+    <title>Explore Events | ZG.GIGS</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
     <style>
-        body { background-color: #0a0a0c; color: #e4e4e7; }
+        body { background-color: #0a0a0c; color: #e4e4e7; font-family: sans-serif; }
         .glass-card { 
             background: rgba(23, 23, 26, 0.6); 
             backdrop-filter: blur(10px); 
             border: 1px solid rgba(255, 255, 255, 0.08); 
-            transition: all 0.3s ease;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
         .glass-card:hover { 
             border-color: rgba(99, 102, 241, 0.5);
             transform: translateY(-4px);
             background: rgba(30, 30, 35, 0.8);
+        }
+        /* Custom styling for the range slider to match the dark theme */
+        input[type=range]::-webkit-slider-runnable-track {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            height: 6px;
+        }
+        input[type=range]::-webkit-slider-thumb {
+            margin-top: -5px;
         }
     </style>
 </head>
@@ -25,7 +34,7 @@
 
     <nav class="border-b border-white/5 py-4 px-6 sticky top-0 z-50 bg-[#0a0a0c]/80 backdrop-blur-md">
         <div class="max-w-6xl mx-auto flex justify-between items-center">
-            <a href="index.html" class="font-black tracking-tighter text-xl text-white">ZG<span class="text-indigo-500">.</span>GIGS</a>
+            <a href="index.html" class="font-black tracking-tighter text-xl text-white italic">ZG<span class="text-indigo-500">.</span>GIGS</a>
             <div class="flex gap-6 text-sm font-medium">
                 <a href="index.html" class="text-zinc-400 hover:text-white transition-colors">Calendar</a>
                 <a href="stranica.html" class="text-white border-b-2 border-indigo-500 pb-1">Explore Events</a>
@@ -33,35 +42,52 @@
         </div>
     </nav>
 
-    <header class="max-w-6xl mx-auto px-6 pt-16 pb-8">
-        <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-4">Upcoming <span class="text-indigo-500">Events</span></h1>
+    <header class="max-w-6xl mx-auto px-6 pt-12 pb-8">
+        <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-6 tracking-tight">Upcoming <span class="text-indigo-500">Events</span></h1>
         
-        <div class="space-y-6 mt-8">
-            <div class="relative max-w-md">
-                <span class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                    <svg class="h-5 w-5 text-zinc-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
-                </span>
-                <input 
-                    type="text" 
-                    onkeyup="handleSearch(this.value)"
-                    placeholder="Search artist or venue..." 
-                    class="block w-full pl-10 pr-3 py-3 bg-white/5 border border-white/10 rounded-2xl text-zinc-200 placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all"
-                >
+        <div class="space-y-8 bg-white/5 p-6 rounded-3xl border border-white/10 shadow-2xl">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="space-y-3">
+                    <label class="text-[10px] font-bold uppercase tracking-[0.2em] text-zinc-500 ml-1">Live Search</label>
+                    <div class="relative group">
+                        <span class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <svg class="h-4 w-4 text-zinc-500 group-focus-within:text-indigo-500 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                        </span>
+                        <input type="text" id="searchInput" onkeyup="applyAllFilters()" placeholder="Search artist..." 
+                            class="block w-full pl-10 pr-3 py-3 bg-black/40 border border-white/10 rounded-xl text-zinc-200 focus:ring-2 focus:ring-indigo-500 outline-none transition-all placeholder-zinc-600">
+                    </div>
+                </div>
+
+                <div class="space-y-3">
+                    <label class="text-[10px] font-bold uppercase tracking-[0.2em] text-zinc-500 ml-1">Venue Filter</label>
+                    <select id="venueFilter" onchange="applyAllFilters()" 
+                        class="block w-full px-4 py-3 bg-black/40 border border-white/10 rounded-xl text-zinc-200 focus:ring-2 focus:ring-indigo-500 outline-none transition-all cursor-pointer">
+                        <option value="all">All Zagreb Venues</option>
+                    </select>
+                </div>
+
+                <div class="space-y-3">
+                    <div class="flex justify-between items-end ml-1">
+                        <label class="text-[10px] font-bold uppercase tracking-[0.2em] text-zinc-500">Timeline</label>
+                        <span id="dateLabel" class="text-xs font-bold text-indigo-400 bg-indigo-500/10 px-2 py-0.5 rounded">All Dates</span>
+                    </div>
+                    <div class="pt-4 px-2">
+                        <input type="range" id="dateSlider" oninput="applyAllFilters()" 
+                            class="w-full h-1.5 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-indigo-500">
+                        <div class="flex justify-between text-[9px] font-bold text-zinc-600 mt-3 uppercase tracking-tighter">
+                            <span id="minDateLabel">Start</span>
+                            <span id="maxDateLabel">End</span>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div class="flex flex-wrap items-center justify-between gap-4">
-                <div class="flex flex-wrap gap-2">
-                    <button onclick="filterByType('all')" class="px-4 py-2 rounded-full bg-indigo-500 text-white text-xs font-bold hover:bg-indigo-400 transition-all">All</button>
-                    <button onclick="filterByType('Concert')" class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-zinc-400 text-xs font-bold hover:bg-white/10 transition-all">Concerts</button>
-                    <button onclick="filterByType('Festival')" class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-zinc-400 text-xs font-bold hover:bg-white/10 transition-all">Festivals</button>
-                    <button onclick="filterByType('Theater')" class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-zinc-400 text-xs font-bold hover:bg-white/10 transition-all">Theater</button>
-                    <button onclick="filterByType('DJ')" class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-zinc-400 text-xs font-bold hover:bg-white/10 transition-all">DJ Sets</button>
-                </div>
-                
-                <button onclick="reverseSort()" class="flex items-center gap-2 text-sm text-zinc-500 hover:text-white transition-colors">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4"></path></svg>
-                    Toggle Order
-                </button>
+            <div class="flex flex-wrap gap-2 pt-6 border-t border-white/5">
+                <button onclick="setCategory('all', this)" class="filter-pill px-5 py-2 rounded-full bg-indigo-500 text-white text-[11px] font-black uppercase tracking-widest transition-all shadow-lg shadow-indigo-500/20">All</button>
+                <button onclick="setCategory('Concert', this)" class="filter-pill px-5 py-2 rounded-full bg-white/5 border border-white/10 text-zinc-400 text-[11px] font-black uppercase tracking-widest hover:bg-white/10 transition-all">Concerts</button>
+                <button onclick="setCategory('Festival', this)" class="filter-pill px-5 py-2 rounded-full bg-white/5 border border-white/10 text-zinc-400 text-[11px] font-black uppercase tracking-widest hover:bg-white/10 transition-all">Festivals</button>
+                <button onclick="setCategory('DJ', this)" class="filter-pill px-5 py-2 rounded-full bg-white/5 border border-white/10 text-zinc-400 text-[11px] font-black uppercase tracking-widest hover:bg-white/10 transition-all">DJ Sets</button>
+                <button onclick="setCategory('Theater', this)" class="filter-pill px-5 py-2 rounded-full bg-white/5 border border-white/10 text-zinc-400 text-[11px] font-black uppercase tracking-widest hover:bg-white/10 transition-all">Theater</button>
             </div>
         </div>
     </header>
@@ -77,6 +103,8 @@
     <script>
         const CSV_URL = 'events.csv'; 
         let allEvents = []; 
+        let uniqueDates = [];
+        let currentCategory = 'all';
 
         const TYPE_COLORS = {
             'concert': 'text-indigo-300 bg-indigo-500/20 border-indigo-500/30',
@@ -92,52 +120,78 @@
                 header: true,
                 skipEmptyLines: true,
                 complete: function(results) {
-                    allEvents = results.data;
-                    displayEvents(allEvents);
+                    // Clean data: ensure every row has a date and artist
+                    allEvents = results.data.filter(e => e.date && e.artist);
+                    
+                    setupVenueDropdown();
+                    setupDateSlider();
+                    applyAllFilters(); // Initial render
                 },
                 error: function() {
                     document.getElementById('event-grid').innerHTML = `
-                        <div class="col-span-full text-center py-20 bg-red-500/10 rounded-3xl border border-red-500/20">
-                            <p class="text-red-400 font-semibold">Failed to fetch events.csv</p>
+                        <div class="col-span-full text-center py-20 bg-red-500/5 rounded-3xl border border-red-500/20">
+                            <p class="text-red-400 font-bold tracking-tight">CSV Sync Failed</p>
                         </div>`;
                 }
             });
         }
 
-        function handleSearch(query) {
-            const q = query.toLowerCase();
-            const filtered = allEvents.filter(event => 
-                (event.artist || "").toLowerCase().includes(q) || 
-                (event.venue || "").toLowerCase().includes(q)
-            );
-            displayEvents(filtered);
+        function setupVenueDropdown() {
+            const venueSelect = document.getElementById('venueFilter');
+            const venues = [...new Set(allEvents.map(e => e.venue))].filter(Boolean).sort();
+            venues.forEach(v => {
+                const opt = document.createElement('option');
+                opt.value = v;
+                opt.textContent = v;
+                venueSelect.appendChild(opt);
+            });
         }
 
-        function filterByType(type) {
-            const buttons = document.querySelectorAll('button[onclick^="filterByType"]');
-            buttons.forEach(btn => {
-                btn.classList.replace('bg-indigo-500', 'bg-white/5');
-                btn.classList.replace('text-white', 'text-zinc-400');
-            });
-            event.currentTarget.classList.add('bg-indigo-500', 'text-white');
-
-            if (type === 'all') {
-                displayEvents(allEvents);
-            } else {
-                const filtered = allEvents.filter(e => (e.type || "").toLowerCase() === type.toLowerCase());
-                displayEvents(filtered);
+        function setupDateSlider() {
+            uniqueDates = [...new Set(allEvents.map(e => e.date))].sort();
+            const slider = document.getElementById('dateSlider');
+            if (uniqueDates.length > 0) {
+                slider.min = 0;
+                slider.max = uniqueDates.length - 1;
+                slider.value = uniqueDates.length - 1;
+                document.getElementById('minDateLabel').innerText = uniqueDates[0];
+                document.getElementById('maxDateLabel').innerText = uniqueDates[uniqueDates.length - 1];
             }
         }
 
-        function reverseSort() {
-            allEvents.reverse();
-            displayEvents(allEvents);
+        function setCategory(cat, btn) {
+            currentCategory = cat;
+            document.querySelectorAll('.filter-pill').forEach(b => {
+                b.className = 'filter-pill px-5 py-2 rounded-full bg-white/5 border border-white/10 text-zinc-400 text-[11px] font-black uppercase tracking-widest hover:bg-white/10 transition-all';
+            });
+            btn.className = 'filter-pill px-5 py-2 rounded-full bg-indigo-500 text-white text-[11px] font-black uppercase tracking-widest transition-all shadow-lg shadow-indigo-500/20';
+            applyAllFilters();
+        }
+
+        function applyAllFilters() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            const selectedVenue = document.getElementById('venueFilter').value;
+            const dateIdx = document.getElementById('dateSlider').value;
+            const maxDate = uniqueDates[dateIdx];
+            
+            document.getElementById('dateLabel').innerText = maxDate ? `Until ${maxDate}` : "All Dates";
+
+            const filtered = allEvents.filter(event => {
+                const matchesSearch = (event.artist + event.venue).toLowerCase().includes(searchTerm);
+                const matchesVenue = selectedVenue === 'all' || event.venue === selectedVenue;
+                const matchesType = currentCategory === 'all' || (event.type || "").toLowerCase() === currentCategory.toLowerCase();
+                const matchesDate = !maxDate || event.date <= maxDate;
+
+                return matchesSearch && matchesVenue && matchesType && matchesDate;
+            });
+
+            displayEvents(filtered);
         }
 
         function displayEvents(events) {
             const container = document.getElementById('event-grid');
             if (events.length === 0) {
-                container.innerHTML = `<p class="col-span-full text-center py-20 text-zinc-500 font-medium">No matching events found.</p>`;
+                container.innerHTML = `<div class="col-span-full text-center py-24 text-zinc-600 font-medium tracking-tight">No events match your current filters.</div>`;
                 return;
             }
 
@@ -147,26 +201,29 @@
                 const mapUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(event.venue + ' Zagreb')}`;
 
                 return `
-                    <div class="glass-card rounded-3xl p-6 flex flex-col justify-between">
+                    <div class="glass-card rounded-3xl p-6 flex flex-col justify-between h-full">
                         <div>
-                            <div class="flex justify-between items-start mb-4">
-                                <span class="px-3 py-1 rounded-full text-[10px] uppercase tracking-widest font-bold border ${badgeClass}">
+                            <div class="flex justify-between items-start mb-5">
+                                <span class="px-3 py-1 rounded-full text-[9px] uppercase tracking-[0.15em] font-black border ${badgeClass}">
                                     ${event.type || 'Event'}
                                 </span>
-                                <span class="text-zinc-500 text-xs font-medium">${event.date}</span>
+                                <span class="text-zinc-500 text-[11px] font-bold tracking-tighter">${event.date}</span>
                             </div>
-                            <h3 class="text-xl font-bold text-white mb-2 leading-tight">${event.artist}</h3>
-                            <p class="text-zinc-500 text-xs italic">via ${event.source}</p>
+                            <h3 class="text-xl font-bold text-white mb-2 leading-tight group-hover:text-indigo-400 transition-colors">${event.artist}</h3>
+                            <p class="text-zinc-500 text-[10px] font-medium uppercase tracking-widest">Source: ${event.source}</p>
                         </div>
                         
-                        <div class="flex items-center justify-between mt-6 pt-4 border-t border-white/5">
-                            <a href="${mapUrl}" target="_blank" class="flex items-center text-zinc-300 text-sm hover:text-indigo-400 transition-colors group">
-                                <svg class="w-4 h-4 mr-2 text-indigo-500 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                                <span class="truncate max-w-[150px] border-b border-transparent group-hover:border-indigo-500">${event.venue}</span>
+                        <div class="flex items-center justify-between mt-8 pt-4 border-t border-white/5">
+                            <a href="${mapUrl}" target="_blank" class="flex items-center text-zinc-400 text-xs hover:text-indigo-400 transition-colors group">
+                                <svg class="w-4 h-4 mr-2 text-indigo-500 group-hover:scale-125 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                </svg>
+                                <span class="truncate max-w-[140px] border-b border-transparent group-hover:border-indigo-500 pb-0.5">${event.venue}</span>
                             </a>
                             
-                            <a href="${event.link}" target="_blank" class="bg-indigo-500/10 hover:bg-indigo-500 text-indigo-400 hover:text-white p-2 rounded-xl transition-all">
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                            <a href="${event.link}" target="_blank" class="bg-white/5 hover:bg-indigo-500 text-white p-2.5 rounded-xl transition-all shadow-xl">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
                             </a>
                         </div>
                     </div>`;
