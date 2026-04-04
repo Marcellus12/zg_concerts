@@ -3,58 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zagreb Gig Calendar 🎸</title>
+    <title>Zagreb Gig Calendar | Dark Edition</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body { font-family: -apple-system, system-ui, sans-serif; line-height: 1.6; color: #333; max-width: 700px; margin: 40px auto; padding: 20px; background-color: #f9f9f9; }
-        .card { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); text-align: center; }
-        h1 { margin-top: 0; color: #1d1d1f; }
-        .button { display: inline-block; background: #007AFF; color: white; padding: 14px 28px; text-decoration: none; border-radius: 10px; font-weight: bold; margin: 20px 0; transition: transform 0.2s; border: none; cursor: pointer; }
-        .button:hover { transform: scale(1.05); background: #0063cc; }
-        .instructions { text-align: left; background: #f1f1f2; padding: 20px; border-radius: 8px; margin-top: 30px; }
-        code { background: #e0e0e0; padding: 4px 8px; border-radius: 4px; font-family: monospace; font-size: 0.9em; word-break: break-all; color: #d63384; }
-        .step { margin-bottom: 20px; border-bottom: 1px solid #ddd; padding-bottom: 10px; }
-        .step:last-child { border-bottom: none; }
-        .footer { margin-top: 20px; font-size: 0.85em; color: #888; }
+        body { background-color: #0a0a0c; color: #e4e4e7; }
+        .glass { 
+            background: rgba(23, 23, 26, 0.7); 
+            backdrop-filter: blur(12px); 
+            border: 1px solid rgba(255, 255, 255, 0.1); 
+        }
+        .accent-gradient {
+            background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+        }
+        .btn-hover:hover { transform: translateY(-2px); box-shadow: 0 10px 20px -10px rgba(99, 102, 241, 0.5); }
     </style>
 </head>
-<body>
-    <div class="card">
-        <h1>Zagreb Gig Calendar 🎸</h1>
-        <p>Automatically updated concert feeds for Zagreb, Croatia.<br>Never miss a show at Tvornica, Močvara, Vintage, and more.</p>
-        
-        <a href="zagreb_gigs.ics" class="button">Download Calendar (.ics)</a>
+<body class="min-h-screen antialiased">
 
-        <div class="instructions">
-            <h3>📅 How to Subscribe (Recommended)</h3>
-            <p>Subscribe to this URL to see new concerts appear automatically in your calendar app.</p>
-            
-            <div class="step">
-                <strong>Google Calendar (Android/Desktop):</strong><br>
-                1. Open <a href="https://calendar.google.com" target="_blank">Google Calendar</a>.<br>
-                2. Click the <strong>+</strong> next to "Other calendars" (left sidebar).<br>
-                3. Select <strong>"From URL"</strong>.<br>
-                4. Paste this link:<br>
-                <code>https://marcellus12.github.io/zg_concerts/zagreb_gigs.ics</code>
-            </div>
-
-            <div class="step">
-                <strong>iPhone / Apple Calendar:</strong><br>
-                1. Open <strong>Settings</strong> > <strong>Calendar</strong>.<br>
-                2. Tap <strong>Accounts</strong> > <strong>Add Account</strong> > <strong>Other</strong>.<br>
-                3. Tap <strong>Add Subscribed Calendar</strong>.<br>
-                4. Paste the URL above.
+    <nav class="border-b border-white/5 py-4 px-6 sticky top-0 z-50 glass">
+        <div class="max-w-5xl mx-auto flex justify-between items-center">
+            <span class="font-black tracking-tighter text-xl text-white">ZG<span class="text-indigo-500">.</span>GIGS</span>
+            <div class="flex gap-6 text-sm font-medium text-zinc-400">
+                <a href="index.html" class="text-white">Calendar</a>
+                <a href="stranica.html" class="hover:text-white transition-colors">Explore Events</a>
             </div>
         </div>
-        
-        <div class="footer">
-            <div class="footer">
-                Data synced twice daily from Songkick and Tvornica <br>
-                <strong>Last Update:</strong> <span id="update-time">Loading...</span><br>
-                <a href="events.csv" style="color: #007AFF; text-decoration: none;">Raw Data (CSV)</a> | 
-                <a href="https://github.com/Marcellus12/zg_concerts" style="color: #007AFF; text-decoration: none;">View Source</a>
-            </div>
-        <script src="last_updated.js"></script>
+    </nav>
+
+    <main class="max-w-4xl mx-auto px-6 pt-20 pb-12 text-center">
+        <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight text-white mb-6">
+            Zagreb <span class="text-transparent bg-clip-text accent-gradient">Live.</span>
+        </h1>
+        <p class="text-zinc-400 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
+            Automatically updated concert feeds from Tvornica, Močvara, and Vintage. Synced to your personal calendar.
+        </p>
+
+        <div class="flex flex-wrap justify-center gap-4 mb-20">
+            <a href="zagreb_gigs.ics" class="accent-gradient btn-hover text-white px-8 py-4 rounded-full font-bold transition-all flex items-center gap-2">
+                <span>Download .ics</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+            </a>
+            <a href="#instructions" class="bg-zinc-800/50 hover:bg-zinc-800 border border-white/10 px-8 py-4 rounded-full font-bold transition-all text-white">
+                How to Subscribe
+            </a>
         </div>
-    </div>
+
+        <div id="instructions" class="grid md:grid-cols-2 gap-6 text-left mb-20">
+            <div class="glass p-8 rounded-3xl">
+                <h3 class="text-indigo-400 font-bold mb-4 flex items-center gap-2">
+                    <span class="w-8 h-8 rounded-lg bg-indigo-500/20 flex items-center justify-center text-xs">G</span> Google Calendar
+                </h3>
+                <ol class="text-sm text-zinc-400 space-y-3">
+                    <li>1. Open <a href="https://calendar.google.com" class="text-white underline">Google Calendar</a></li>
+                    <li>2. Click <span class="text-zinc-200">+</span> next to "Other calendars"</li>
+                    <li>3. Select <span class="text-zinc-200">"From URL"</span></li>
+                    <li class="break-all pt-2 bg-black/30 p-2 rounded"><code>https://marcellus12.github.io/zg_concerts/zagreb_gigs.ics</code></li>
+                </ol>
+            </div>
+
+            <div class="glass p-8 rounded-3xl">
+                <h3 class="text-purple-400 font-bold mb-4 flex items-center gap-2">
+                    <span class="w-8 h-8 rounded-lg bg-purple-500/20 flex items-center justify-center text-xs">A</span> Apple / iPhone
+                </h3>
+                <ol class="text-sm text-zinc-400 space-y-3">
+                    <li>1. Open <span class="text-zinc-200">Settings > Calendar</span></li>
+                    <li>2. Tap <span class="text-zinc-200">Accounts > Add Account</span></li>
+                    <li>3. Select <span class="text-zinc-200">Other > Subscribed Calendar</span></li>
+                    <li>4. Paste the URL from the left</li>
+                </ol>
+            </div>
+        </div>
+
+        <footer class="border-t border-white/5 pt-10 text-xs text-zinc-500 tracking-widest uppercase">
+            <p class="mb-4">Data synced from Songkick & Tvornica • Updated: <span id="update-time" class="text-zinc-300">Loading...</span></p>
+            <div class="flex justify-center gap-4">
+                <a href="events.csv" class="hover:text-white transition-colors">Raw CSV</a>
+                <span>|</span>
+                <a href="https://github.com/Marcellus12/zg_concerts" class="hover:text-white transition-colors">GitHub Source</a>
+            </div>
+        </footer>
+    </main>
+
+    <script src="last_updated.js"></script>
 </body>
 </html>
