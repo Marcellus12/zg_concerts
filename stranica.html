@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zagreb Events 2026 | Future Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans">
+
+    <header class="bg-white border-b border-slate-200 sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold tracking-tight text-indigo-600">ZG.EVENTS</h1>
+            <nav class="hidden md:flex space-x-8 text-sm font-medium">
+                <a href="#" class="hover:text-indigo-600">Upcoming</a>
+                <a href="#" class="hover:text-indigo-600">Festivals</a>
+                <a href="#" class="hover:text-indigo-600">Submit Event</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h2 class="text-4xl md:text-6xl font-extrabold mb-4">Discover Zagreb's Future.</h2>
+            <p class="text-slate-500 text-lg max-w-2xl mx-auto">Explore all upcoming concerts, exhibitions, and festivals in the capital city, synced directly from our open-source database.</p>
+        </div>
+    </section>
+
+    <main class="max-w-6xl mx-auto px-6 py-12">
+        <div id="event-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <p class="col-span-full text-center text-slate-400">Loading Zagreb events...</p>
+        </div>
+    </main>
+
+    <script>
+        // Replace this URL with your actual RAW GitHub CSV link
+        const CSV_URL = 'https://raw.https://github.com/Marcellus12/zg_concerts/events.csv';
+
+        async function loadEvents() {
+            Papa.parse(CSV_URL, {
+                download: true,
+                header: true,
+                complete: function(results) {
+                    displayEvents(results.data);
+                },
+                error: function(err) {
+                    document.getElementById('event-grid').innerHTML = `<p class="text-red-500">Error loading data. Check CSV URL.</p>`;
+                }
+            });
+        }
+
+        function displayEvents(events) {
+            const container = document.getElementById('event-grid');
+            container.innerHTML = events.map(event => `
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-md transition-shadow">
+                    <div class="p-6">
+                        <div class="text-xs font-bold text-indigo-500 uppercase tracking-widest mb-2">${event.Category || 'General'}</div>
+                        <h3 class="text-xl font-bold mb-2">${event.Title}</h3>
+                        <div class="flex items-center text-slate-500 text-sm mb-4">
+                            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                            ${event.Date}
+                        </div>
+                        <p class="text-slate-600 text-sm mb-6 line-clamp-3">${event.Description}</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm font-semibold">${event.Location}</span>
+                            <a href="${event.Link || '#'}" class="text-indigo-600 font-bold text-sm hover:underline">Details &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        window.onload = loadEvents;
+    </script>
+</body>
+</html>
