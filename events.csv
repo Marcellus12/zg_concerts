@@ -1,5 +1,4 @@
 ﻿date,artist,venue,type,link,source
-2026-04-07,Nhau,Kuc Travno,Concert,https://www.songkick.com/concerts/43045512-nhau-at-kuc-travno?utm_medium=organic&utm_source=microformat,Songkick
 2026-04-08,The Breath,Vatroslav Lisinski Concert Hall,Concert,https://www.songkick.com/concerts/43062732-breath-at-vatroslav-lisinski-concert-hall?utm_medium=organic&utm_source=microformat,Songkick
 2026-04-10,Zvjezdan Ružić,Tvornica kulture,Concert,https://www.songkick.com/concerts/43059058-zvjezdan-ruzic-at-tvornica-kulture?utm_medium=organic&utm_source=microformat,Songkick
 2026-04-12,Geoff Tate's Operation Mindcrime,Boogaloo Club,Concert,https://www.songkick.com/concerts/42986845-geoff-tates-operation-mindcrime-at-boogaloo-club?utm_medium=organic&utm_source=microformat,Songkick
@@ -27,6 +26,7 @@
 2026-05-23,kids from the sky,Boogaloo,Concert,https://www.songkick.com/concerts/43076473-kids-from-the-sky-at-boogaloo?utm_medium=organic&utm_source=microformat,Songkick
 2026-05-27,Steven Brown,Croatia,Concert,https://www.songkick.com/concerts/43113315-steven-brown-at-croatia?utm_medium=organic&utm_source=microformat,Songkick
 2026-05-30,Seine <3,Zagreb,Concert,https://www.songkick.com/concerts/42917371-seine-3-at-unknown-venue?utm_medium=organic&utm_source=microformat,Songkick
+2026-05-30,Heavenphetamine,Attack! AKC Medika,Concert,https://www.songkick.com/concerts/43145695-heavenphetamine-at-attack-akc-medika?utm_medium=organic&utm_source=microformat,Songkick
 2026-06-04,Yngwie Malmsteen,Boogaloo Club,Concert,https://www.songkick.com/concerts/43052553-yngwie-malmsteen-at-boogaloo-club?utm_medium=organic&utm_source=microformat,Songkick
 2026-06-10,Empire of the Sun,SRC Šalata,Concert,https://www.songkick.com/concerts/43008762-empire-of-the-sun-at-src-salata?utm_medium=organic&utm_source=microformat,Songkick
 2026-06-15,Sabaton,Zagrebački Velesajam,Concert,https://www.songkick.com/concerts/42954543-sabaton-at-zagrebacki-velesajam?utm_medium=organic&utm_source=microformat,Songkick
@@ -55,7 +55,6 @@
 2026-10-20,GZUZ,Tvornica kulture,Concert,https://www.songkick.com/concerts/43102192-gzuz-at-tvornica-kulture?utm_medium=organic&utm_source=microformat,Songkick
 2026-10-21,Danko Jones,Vintage Industrial Bar,Concert,https://www.songkick.com/concerts/43075926-danko-jones-at-vintage-industrial-bar?utm_medium=organic&utm_source=microformat,Songkick
 2026-10-24,Fink,Klub Močvara,Concert,https://www.songkick.com/concerts/43099913-fink-at-klub-mocvara?utm_medium=organic&utm_source=microformat,Songkick
-2026-10-30,Ki Klop,Tvornica kulture,Concert,https://www.songkick.com/concerts/43076538-ki-klop-at-tvornica-kulture?utm_medium=organic&utm_source=microformat,Songkick
 2026-04-10,Zvjezdan Ružić – Playlista mog djetinjstva @ Tvornica Kulture,Tvornica Kulture,Concert,https://www.tvornicakulture.com/2026/04/zvjezdan-ruzic-playlista-mog-djetinjstva-tvornica-kulture/,Tvornica
 2026-04-11,PLESAČ SPOROG STEPA,Tvornica Kulture,Concert,https://www.tvornicakulture.com/2026/02/plesac-sporog-stepa-u-tvornici-kulture/,Tvornica
 2026-04-13,APPARAT,Tvornica Kulture,Concert,https://www.tvornicakulture.com/2026/02/apparat/,Tvornica
@@ -73,6 +72,7 @@
 2026-07-21,SLAUGHTER TO PREVAIL,Tvornica Kulture,Concert,https://www.tvornicakulture.com/2026/03/slaughter-to-prevail/,Tvornica
 2026-10-09,MILE KEKIN,Tvornica Kulture,Concert,https://www.tvornicakulture.com/2026/03/mile-kekin-u-tvornici-kulture-2/,Tvornica
 2026-11-13,CLAN OF XYMOX,Tvornica Kulture,Concert,https://www.tvornicakulture.com/2026/02/clan-of-xymox-u-tvornici-kulture/,Tvornica
+2026-10-30,Ki Klop,Tvornica Kulture,Concert,https://www.tvornicakulture.com/2026/03/ki-klop-najavljuje-najveci-samostalni-koncert-u-tvornici-kulture/,Tvornica
 2026-12-26,Studio 54 by Tomo Ricov,Tvornica Kulture,Concert,https://www.tvornicakulture.com/2026/02/studio-54-by-tomo-ricov/,Tvornica
 2026-05-25,Andrija Milošević – “Idem putem pa zagrlim drvo”,Tvornica Kulture,Concert,https://www.tvornicakulture.com/2026/03/andrija-milosevic-idem-putem-pa-zagrlim-drvo/,Tvornica
 2027-01-08,SWINGERS present's ELVIS!,Tvornica Kulture,Concert,https://www.tvornicakulture.com/2026/02/swingers-presents-elvis-u-tvornici-kulture/,Tvornica
