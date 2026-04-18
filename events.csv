@@ -1,5 +1,4 @@
 ﻿date,artist,venue,type,link,source
-2026-04-18,The Sonic Dawn,Hard Place,Concert,https://www.songkick.com/concerts/43076667-sonic-dawn-at-hard-place?utm_medium=organic&utm_source=microformat,Songkick
 2026-04-18,Khirki,Primarius,Concert,https://www.songkick.com/concerts/43067926-khirki-at-primarius?utm_medium=organic&utm_source=microformat,Songkick
 2026-04-19,Myrath,Klub Močvara,Concert,https://www.songkick.com/concerts/42849977-myrath-at-klub-mocvara?utm_medium=organic&utm_source=microformat,Songkick
 2026-04-19,Morost,Vintage Industrial Bar,Concert,https://www.songkick.com/concerts/43160156-morost-at-vintage-industrial-bar?utm_medium=organic&utm_source=microformat,Songkick
@@ -46,6 +45,7 @@
 2026-07-07,BEAT,SRC Šalata,Concert,https://www.songkick.com/concerts/42973950-beat-at-src-salata?utm_medium=organic&utm_source=microformat,Songkick
 2026-07-13,Voivod,Vintage Industrial Bar,Concert,https://www.songkick.com/concerts/43030784-voivod-at-vintage-industrial-bar?utm_medium=organic&utm_source=microformat,Songkick
 2026-07-16,Marilyn Manson,Arena Zagreb,Concert,https://www.songkick.com/concerts/42919521-marilyn-manson-at-arena-zagreb?utm_medium=organic&utm_source=microformat,Songkick
+2026-07-21,House Of Protection,Boogaloo Club,Concert,https://www.songkick.com/concerts/43166054-house-of-protection-at-boogaloo-club?utm_medium=organic&utm_source=microformat,Songkick
 2026-07-29,Defected Croatia 2026,Croatia,Concert,https://www.songkick.com/festivals/1526864-defected-croatia/id/43138711-defected-croatia-2026?utm_medium=organic&utm_source=microformat,Songkick
 2026-08-08,Amyl and The Sniffers,SRC Šalata,Concert,https://www.songkick.com/concerts/42905298-amyl-and-the-sniffers-at-src-salata?utm_medium=organic&utm_source=microformat,Songkick
 2026-09-24,The Nocturnal Affair,Boogaloo,Concert,https://www.songkick.com/concerts/43119457-nocturnal-affair-at-boogaloo?utm_medium=organic&utm_source=microformat,Songkick
@@ -54,6 +54,7 @@
 2026-10-20,GZUZ,Tvornica kulture,Concert,https://www.songkick.com/concerts/43102192-gzuz-at-tvornica-kulture?utm_medium=organic&utm_source=microformat,Songkick
 2026-10-21,Danko Jones,Vintage Industrial Bar,Concert,https://www.songkick.com/concerts/43075926-danko-jones-at-vintage-industrial-bar?utm_medium=organic&utm_source=microformat,Songkick
 2026-10-24,Fink,Klub Močvara,Concert,https://www.songkick.com/concerts/43099913-fink-at-klub-mocvara?utm_medium=organic&utm_source=microformat,Songkick
+2026-10-30,Ki Klop,Tvornica kulture,Concert,https://www.songkick.com/concerts/43076538-ki-klop-at-tvornica-kulture?utm_medium=organic&utm_source=microformat,Songkick
 2026-04-18,ToMa @ Tvornica Kulture,Tvornica Kulture,Concert,https://www.tvornicakulture.com/2026/03/toma-tvornica-kulture/,Tvornica
 2026-04-25,Pero Galić,Tvornica Kulture,Concert,https://www.tvornicakulture.com/2025/12/pero-galic-priprema-samostalni-koncert-u-tvornici-kulture/,Tvornica
 2026-05-15,FUN LOVIN CRIMINALS,Tvornica Kulture,Concert,https://www.tvornicakulture.com/2025/12/fun-lovin-criminals-u-tvornici-kulture/,Tvornica
@@ -68,7 +69,6 @@
 2026-10-09,MILE KEKIN,Tvornica Kulture,Concert,https://www.tvornicakulture.com/2026/03/mile-kekin-u-tvornici-kulture-2/,Tvornica
 2026-10-18,NAŠIH 10,Tvornica Kulture,Concert,https://www.tvornicakulture.com/2026/04/nasih-10/,Tvornica
 2026-11-13,CLAN OF XYMOX,Tvornica Kulture,Concert,https://www.tvornicakulture.com/2026/02/clan-of-xymox-u-tvornici-kulture/,Tvornica
-2026-10-30,Ki Klop,Tvornica Kulture,Concert,https://www.tvornicakulture.com/2026/03/ki-klop-najavljuje-najveci-samostalni-koncert-u-tvornici-kulture/,Tvornica
 2026-12-26,Studio 54 by Tomo Ricov,Tvornica Kulture,Concert,https://www.tvornicakulture.com/2026/02/studio-54-by-tomo-ricov/,Tvornica
 2026-05-25,Andrija Milošević – “Idem putem pa zagrlim drvo”,Tvornica Kulture,Concert,https://www.tvornicakulture.com/2026/03/andrija-milosevic-idem-putem-pa-zagrlim-drvo/,Tvornica
 2027-01-08,SWINGERS present's ELVIS!,Tvornica Kulture,Concert,https://www.tvornicakulture.com/2026/02/swingers-presents-elvis-u-tvornici-kulture/,Tvornica
