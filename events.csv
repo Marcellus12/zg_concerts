@@ -1,64 +1,22 @@
 ﻿date,artist,venue,type,link,source
-2026-09-03,Hollywood Vampires,Arena Zagreb,Concert,https://www.songkick.com/concerts/43135244-hollywood-vampires-at-arena-zagreb?utm_medium=organic&utm_source=microformat,Songkick
-2026-09-04,Radio Slave,Peti Kupe,Concert,https://www.songkick.com/concerts/43303983-radio-slave-at-peti-kupe?utm_medium=organic&utm_source=microformat,Songkick
-2026-09-04,Sunčani Fest 2026,Baraka,Concert,https://www.songkick.com/festivals/3743031-suncani-fest/id/43349387-sunani-fest-2026?utm_medium=organic&utm_source=microformat,Songkick
-2026-09-08,GusGus,Tvornica Kulture,Concert,https://www.songkick.com/concerts/43196649-gusgus-at-tvornica-kulture?utm_medium=organic&utm_source=microformat,Songkick
-2026-09-10,The Festival 2026,Tvornica Kulture,Festival,https://www.songkick.com/festivals/204581-the/id/43333973-the-festival-2026?utm_medium=organic&utm_source=microformat,Songkick
-2026-09-11,The Rumjacks,Vintage Industrial Bar,Concert,https://www.songkick.com/concerts/43198910-rumjacks-at-vintage-industrial-bar?utm_medium=organic&utm_source=microformat,Songkick
-2026-09-12,Patrick Topping,Zagreb,Concert,https://www.songkick.com/concerts/43342774-patrick-topping-at-unknown-venue?utm_medium=organic&utm_source=microformat,Songkick
-2026-09-16,Descartes A Kant,Klub Močvara,Concert,https://www.songkick.com/concerts/43302692-descartes-a-kant-at-klub-mocvara?utm_medium=organic&utm_source=microformat,Songkick
-2026-09-17,Béton Armé,Klub Močvara,Concert,https://www.songkick.com/concerts/43302697-beton-arme-at-klub-mocvara?utm_medium=organic&utm_source=microformat,Songkick
-2026-09-18,Jamie Woon,Boogaloo,Concert,https://www.songkick.com/concerts/43217314-jamie-woon-at-boogaloo?utm_medium=organic&utm_source=microformat,Songkick
-2026-09-18,Blackbriar,Vintage Industrial Bar,Concert,https://www.songkick.com/concerts/43307130-blackbriar-at-vintage-industrial-bar?utm_medium=organic&utm_source=microformat,Songkick
-2026-09-19,Orchestre Tout Puissant Marcel Duchamp,FUNK,Concert,https://www.songkick.com/concerts/43384971-orchestre-tout-puissant-marcel-duchamp-at-funk?utm_medium=organic&utm_source=microformat,Songkick
-2026-09-24,The Nocturnal Affair,Boogaloo,Concert,https://www.songkick.com/concerts/43119457-nocturnal-affair-at-boogaloo?utm_medium=organic&utm_source=microformat,Songkick
-2026-09-24,Orchestre Tout Puissant Marcel Duchamp,Klub Močvara,Concert,https://www.songkick.com/concerts/43384983-orchestre-tout-puissant-marcel-duchamp-at-klub-mocvara?utm_medium=organic&utm_source=microformat,Songkick
-2026-09-25,СОЮЗ,Klub Močvara,Concert,https://www.songkick.com/concerts/43180691-soiuz-at-klub-mocvara?utm_medium=organic&utm_source=microformat,Songkick
-2026-09-26,Gautier Capuçon,Vatroslav Lisinski Concert Hall,Concert,https://www.songkick.com/concerts/43249891-gautier-capucon-at-vatroslav-lisinski-concert-hall?utm_medium=organic&utm_source=microformat,Songkick
-2026-09-26,Ben Sims,klub boogaloo,Concert,https://www.songkick.com/concerts/43374689-ben-sims-at-klub-boogaloo?utm_medium=organic&utm_source=microformat,Songkick
-2026-09-28,The 1914,Vintage Industrial Bar,Concert,https://www.songkick.com/concerts/43310436-1914-at-vintage-industrial-bar?utm_medium=organic&utm_source=microformat,Songkick
-2026-09-29,Lucy Kruger & The Lost Boys,Klub Močvara,Concert,https://www.songkick.com/concerts/43210893-lucy-kruger-and-the-lost-boys-at-klub-mocvara?utm_medium=organic&utm_source=microformat,Songkick
-2026-09-30,Autechre,Tvornica Kulture,Concert,https://www.songkick.com/concerts/42917393-autechre-at-tvornica-kulture?utm_medium=organic&utm_source=microformat,Songkick
-2026-10-01,Azymuth,Peti Kupe,Concert,https://www.songkick.com/concerts/43336559-azymuth-at-peti-kupe?utm_medium=organic&utm_source=microformat,Songkick
-2026-10-01,Xandria,Boogaloo,Concert,https://www.songkick.com/concerts/43257710-xandria-at-boogaloo?utm_medium=organic&utm_source=microformat,Songkick
-2026-10-01,Nhau,BP Club,Festival,https://www.songkick.com/festivals/3801814-jazzhr/id/43378180-jazzhr-festival-2026?utm_medium=organic&utm_source=microformat,Songkick
-2026-10-06,A$AP Rocky,Arena Zagreb,Concert,https://www.songkick.com/concerts/43252446-asap-rocky-at-arena-zagreb?utm_medium=organic&utm_source=microformat,Songkick
-2026-10-08,Kosheen,Tvornica Kulture,Concert,https://www.songkick.com/concerts/43105891-kosheen-at-tvornica-kulture?utm_medium=organic&utm_source=microformat,Songkick
-2026-10-08,Seine <3,Vintage Industrial Bar,Concert,https://www.songkick.com/concerts/43258131-seine-3-at-vintage-industrial-bar?utm_medium=organic&utm_source=microformat,Songkick
-2026-10-09,balans (SI),Attack! AKC Medika,Concert,https://www.songkick.com/concerts/43360534-balans-si-at-attack-akc-medika?utm_medium=organic&utm_source=microformat,Songkick
-2026-10-10,Senidah,Arena Zagreb,Concert,https://www.songkick.com/concerts/43307118-senidah-at-arena-zagreb?utm_medium=organic&utm_source=microformat,Songkick
-2026-10-11,Jethro Tull,Koncertna dvorana Vatroslava Lisinskog,Concert,https://www.songkick.com/concerts/43257716-jethro-tull-at-koncertna-dvorana-vatroslava-lisinskog?utm_medium=organic&utm_source=microformat,Songkick
-2026-10-15,Suffocation,Boogaloo,Concert,https://www.songkick.com/concerts/43310462-suffocation-at-boogaloo?utm_medium=organic&utm_source=microformat,Songkick
-2026-10-16,Dejan Matić,Grand Casino Admiral,Concert,https://www.songkick.com/concerts/43307134-dejan-matic-at-grand-casino-admiral?utm_medium=organic&utm_source=microformat,Songkick
-2026-10-16,Chris Liebing,Boogaloo,Concert,https://www.songkick.com/concerts/43366202-chris-liebing-at-boogaloo?utm_medium=organic&utm_source=microformat,Songkick
-2026-10-17,Toma Zdravković,Dvorana Goc-a,Concert,https://www.songkick.com/concerts/43307122-toma-zdravkovic-at-dvorana-goca?utm_medium=organic&utm_source=microformat,Songkick
-2026-10-20,GZUZ,Tvornica Kulture,Concert,https://www.songkick.com/concerts/43102192-gzuz-at-tvornica-kulture?utm_medium=organic&utm_source=microformat,Songkick
-2026-10-20,Deûle,Klub Močvara,Concert,https://www.songkick.com/concerts/43307886-deule-at-klub-mocvara?utm_medium=organic&utm_source=microformat,Songkick
-2026-10-21,Danko Jones,Vintage Industrial Bar,Concert,https://www.songkick.com/concerts/43075926-danko-jones-at-vintage-industrial-bar?utm_medium=organic&utm_source=microformat,Songkick
-2026-10-21,Carbon Based Lifeforms,Peti Kupe,Concert,https://www.songkick.com/concerts/43378329-carbon-based-lifeforms-at-peti-kupe?utm_medium=organic&utm_source=microformat,Songkick
-2026-10-22,Zvjezdan Ružić,Boogaloo Club,Concert,https://www.songkick.com/concerts/43243006-zvjezdan-ruzic-at-boogaloo-club?utm_medium=organic&utm_source=microformat,Songkick
-2026-10-23,Piknik Park,Boogaloo,Concert,https://www.songkick.com/concerts/43257721-piknik-park-linkin-park-tribute-band-at-boogaloo?utm_medium=organic&utm_source=microformat,Songkick
-2026-10-23,Zvjezdan Ružić,Centar Za Kulturu Čakovec,Concert,https://www.songkick.com/concerts/43344149-zvjezdan-ruzic-at-centar-za-kulturu-cakovec?utm_medium=organic&utm_source=microformat,Songkick
-2026-10-24,Fink,Klub Močvara,Concert,https://www.songkick.com/concerts/43099913-fink-at-klub-mocvara?utm_medium=organic&utm_source=microformat,Songkick
-2026-10-28,Bi-2,Tvornica Kulture,Concert,https://www.songkick.com/concerts/43177552-bi2-at-tvornica-kulture?utm_medium=organic&utm_source=microformat,Songkick
-2026-10-30,Ki Klop,Tvornica Kulture,Concert,https://www.songkick.com/concerts/43076538-ki-klop-at-tvornica-kulture?utm_medium=organic&utm_source=microformat,Songkick
-2026-11-02,System Exclusive,Club Mochvara,Concert,https://www.songkick.com/concerts/43341439-system-exclusive-at-club-mochvara?utm_medium=organic&utm_source=microformat,Songkick
-2026-11-04,Wolves In the Throne Room,Klub Močvara,Concert,https://www.songkick.com/concerts/43257728-wolves-in-the-throne-room-at-klub-mocvara?utm_medium=organic&utm_source=microformat,Songkick
-2026-11-05,Tommy Emmanuel,Kino SC,Concert,https://www.songkick.com/concerts/43084350-tommy-emmanuel-at-kino-sc?utm_medium=organic&utm_source=microformat,Songkick
 2026-09-04,ŠTOS –,Tvornica Kulture,Concert,https://www.tvornicakulture.com/2026/07/stos-u-tvornici-kulture/,Tvornica
 2026-09-05,POZDRAV NOVOM VALU,Tvornica Kulture,Concert,https://www.tvornicakulture.com/2026/07/pozdrav-novom-valu-u-tvornici-kulture/,Tvornica
+2026-09-08,Gusgus,Tvornica Kulture,Concert,https://www.tvornicakulture.com/2026/05/gusgus/,Tvornica
 2026-09-09,The AMY WINEHOUSE BAND,Tvornica Kulture,Concert,https://www.tvornicakulture.com/2026/04/the-amy-winehouse-band/,Tvornica
 2026-09-19,Proto Tip,Tvornica Kulture,Concert,https://www.tvornicakulture.com/2026/08/proto-tip-u-tvornici-kulture/,Tvornica
 2026-09-20,Lavina i Alexandra Căpitănescu –,Tvornica Kulture,Concert,https://www.tvornicakulture.com/2026/07/lavina-i-alexandra-capitanescu-u-tvornici-kulture/,Tvornica
 2026-09-26,LIL DRITO IZ TVORNICE 2026.,Tvornica Kulture,Concert,https://www.tvornicakulture.com/2026/07/lil-drito-iz-tvornice-2026/,Tvornica
+2026-09-30,AUTECHRE,Tvornica Kulture,Concert,https://www.tvornicakulture.com/2025/12/autechre/,Tvornica
 2026-10-01,Klapa Kampanel – 30 GODINA,Tvornica Kulture,Concert,https://www.tvornicakulture.com/2026/05/klapa-kampanel-30-godina/,Tvornica
 2026-10-07,NAZARETH,Tvornica Kulture,Concert,https://www.tvornicakulture.com/2026/07/nazareth-u-tvornici-kulture/,Tvornica
+2026-10-08,KOSHEEN,Tvornica Kulture,Concert,https://www.tvornicakulture.com/2026/03/kosheen-u-tvornici-kulture/,Tvornica
 2026-10-09,MILE KEKIN,Tvornica Kulture,Concert,https://www.tvornicakulture.com/2026/03/mile-kekin-u-tvornici-kulture-2/,Tvornica
 2026-10-10,Jasna Zlokić @ Zagreb – Tvornica Kulture,Tvornica Kulture,Concert,https://www.tvornicakulture.com/2026/04/jasna-zlokic-zagreb-tvornica-kulture/,Tvornica
 2026-10-14,Freedom – A Tribute to George Michael @ Tvornica Kulture,Tvornica Kulture,Concert,https://www.tvornicakulture.com/2026/08/freedom-a-tribute-to-george-michael-tvornica-kulture/,Tvornica
 2026-10-15,NEW MODEL ARMY Justin Sullivan & Dean White,Tvornica Kulture,Concert,https://www.tvornicakulture.com/2026/08/new-model-army-justin-sullivan-dean-white-u-tvornici-kulture/,Tvornica
 2026-10-17,Porto Morto,Tvornica Kulture,Concert,https://www.tvornicakulture.com/2026/07/porto-morto-u-tvornici-kulture/,Tvornica
 2026-10-18,NAŠIH 10,Tvornica Kulture,Concert,https://www.tvornicakulture.com/2026/04/nasih-10/,Tvornica
+2026-10-20,GZUZ,Tvornica Kulture,Concert,https://www.tvornicakulture.com/2026/03/gzuz/,Tvornica
 2026-10-24,DALEKA OBALA  / Jakša i Hrepa kvartet,Tvornica Kulture,Concert,https://www.tvornicakulture.com/2026/06/daleka-obala-jaksa-i-hrepa-kvartet/,Tvornica
 2026-10-28,БИ 2,Tvornica Kulture,Concert,https://www.tvornicakulture.com/2026/04/3525/,Tvornica
 2026-11-07,ELEKTRIČNI ORGAZAM + posebna gošća ANICA DOBRA,Tvornica Kulture,Concert,https://www.tvornicakulture.com/2026/07/elektricni-orgazam-posebna-gosca-anica-dobra/,Tvornica
@@ -69,6 +27,7 @@
 2026-11-21,JURA STUBLIĆ & FILM,Tvornica Kulture,Concert,https://www.tvornicakulture.com/2026/07/jura-stublic-film-u-tvornici-kulture-3/,Tvornica
 2026-11-25,MARKO VUKES – prvi solistički koncert,Tvornica Kulture,Concert,https://www.tvornicakulture.com/2026/05/marko-vukes-prvi-solisticki-koncert/,Tvornica
 2026-11-29,Sharon Kovacs,Tvornica Kulture,Concert,https://www.tvornicakulture.com/2026/06/sharon-kovacs-u-tvornici-kulture/,Tvornica
+2026-10-30,Ki Klop,Tvornica Kulture,Concert,https://www.tvornicakulture.com/2026/03/ki-klop-najavljuje-najveci-samostalni-koncert-u-tvornici-kulture/,Tvornica
 2026-12-26,Studio 54 by Tomo Ricov,Tvornica Kulture,Concert,https://www.tvornicakulture.com/2026/02/studio-54-by-tomo-ricov/,Tvornica
 2027-01-08,SWINGERS present's ELVIS!,Tvornica Kulture,Concert,https://www.tvornicakulture.com/2026/02/swingers-presents-elvis-u-tvornici-kulture/,Tvornica
 2027-02-06,DAF – Deutsch Amerikanische Freundschaft,Tvornica Kulture,Concert,https://www.tvornicakulture.com/2025/05/daf-deutsch-amerikanische-freundschaft/,Tvornica
