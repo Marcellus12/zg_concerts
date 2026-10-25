@@ -1,1 +1,1 @@
-document.getElementById('update-time').textContent = '25.10.2026 00:30';
+document.getElementById('update-time').textContent = '25.10.2026 15:00';
